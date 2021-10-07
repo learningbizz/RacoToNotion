@@ -1,0 +1,1476 @@
+BEGIN:VCALENDAR
+PRODID:-//Raco//iCal4j 1.0//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Calendari de manuel.tomas.navid
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211105T100000
+DTEND;TZID=Europe/Madrid:20211105T120000
+SUMMARY:[GRAU-AS] Examen parcial
+UID:examen-22707@raco.fib.upc.edu
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211105T120000
+DTEND;TZID=Europe/Madrid:20211105T133000
+SUMMARY:[GRAU-ER] Examen parcial
+UID:examen-22710@raco.fib.upc.edu
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20220113T080000
+DTEND;TZID=Europe/Madrid:20220113T110000
+SUMMARY:[GRAU-DBD] Examen final
+UID:examen-22996@raco.fib.upc.edu
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200324T235900
+DTEND;TZID=Europe/Madrid:20200324T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.2: AS-IS per ProNovAps - Anàlisi DAFO de la situació actual ...
+UID:practica-70286@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=70286
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160413T150000
+DTEND;TZID=Europe/Madrid:20160413T150000
+SUMMARY:[Practica GRAU-AS] 2on Exercici Entregable
+UID:practica-38784@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-AS&id=38784
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210621T235900
+DTEND;TZID=Europe/Madrid:20210621T235900
+SUMMARY:[Practica GRAU-SIO] CSIO - DOCUMENTS PRINCIPALS dels mòduls centrals de T/P de l'assignatura  ...
+UID:practica-91383@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=91383
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160628T235900
+DTEND;TZID=Europe/Madrid:20160628T235900
+SUMMARY:[Practica GRAU-SIO] Treball per optar a pujar nota o MH: Les Habilitats Directives dels CIOs...
+UID:practica-40323@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=40323
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191118T235900
+DTEND;TZID=Europe/Madrid:20191118T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.2: TO-BE per SCOPE - Generació d'un Business Model Canvas ... 
+UID:practica-61090@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=61090
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20170619T235900
+DTEND;TZID=Europe/Madrid:20170619T235900
+SUMMARY:[Practica GRAU-SIO] Activitat CT - Situació conflictiva i com l'enfrontarieu amb un codi ètic...
+UID:practica-45308@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=45308
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20170112T235900
+DTEND;TZID=Europe/Madrid:20170112T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 3.1 &quot\;ROAD-MAP&quot\; - Des de l'AS-IS fins el TO-BE pels DIs de la Gene...
+UID:practica-42410@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=42410
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180630T235900
+DTEND;TZID=Europe/Madrid:20180630T235900
+SUMMARY:[Practica GRAU-SIO] Activ INT - Lliurament integrat AS-IS + TO-BE + ROADMAP (opcional)...
+UID:practica-50866@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=50866
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20171107T235900
+DTEND;TZID=Europe/Madrid:20171107T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.1: AS-IS Modelització de l'estat actual del domini &quot\;Fer exposicions&quot\;...
+UID:practica-46365@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=46365
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190527T235900
+DTEND;TZID=Europe/Madrid:20190527T235900
+SUMMARY:[Practica GRAU-SIO] Activ 3.2 : Presentació pública del TO-BE i del ROAD-MAP...
+UID:practica-54630@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=54630
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191118T235900
+DTEND;TZID=Europe/Madrid:20191118T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.1: TO-BE per SCOPE - Generació-modelització d'un escenari futur ...
+UID:practica-61088@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=61088
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160510T235900
+DTEND;TZID=Europe/Madrid:20160510T235900
+SUMMARY:[Practica GRAU-AS] Lliurament 2 de la pràctica (Capa de Dades)
+UID:practica-39064@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-AS&id=39064
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20201202T080000
+DTEND;TZID=Europe/Madrid:20201202T080000
+SUMMARY:[Practica GRAU-SIO] Activ 2.3: Vídeo &quot\;elevator pitch&quot\; de la vostra proposta RuralTour (CT G4.2) ... 
+UID:practica-80424@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80424
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210502T235800
+DTEND;TZID=Europe/Madrid:20210502T235800
+SUMMARY:[Practica GRAU-SIO] Activ 2.2: TO-BE per FutFulFan - Generació d'un Business Model Canvas ...
+UID:practica-90188@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90188
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190119T235900
+DTEND;TZID=Europe/Madrid:20190119T235900
+SUMMARY:[Practica GRAU-CSI] Activ 3.1: ROAD-MAP Des de l'AS-IS fins el TO-BE per &quot\;FòrumFIB&quot\;..
+UID:practica-53554@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=53554
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20170327T235900
+DTEND;TZID=Europe/Madrid:20170327T235900
+SUMMARY:[Practica GRAU-SIO] Dubtes AS-IS per la Directora-Gerenta de Bonanova Subastas...
+UID:practica-44131@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=44131
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160505T030000
+DTEND;TZID=Europe/Madrid:20160505T030000
+SUMMARY:[Practica GRAU-AS] 3er Exercici Entregable
+UID:practica-39284@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-AS&id=39284
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161128T175900
+DTEND;TZID=Europe/Madrid:20161128T175900
+SUMMARY:[Practica GRAU-CSI] Entrega de trabajos individuales y ppts sesion 28/11/16
+UID:practica-42163@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=42163
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210502T235900
+DTEND;TZID=Europe/Madrid:20210502T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.3: Vídeo &quot\;elevator pitch&quot\; de la vostra proposta FutFulFan (CT G4.2) ...
+UID:practica-90189@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90189
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211213T235800
+DTEND;TZID=Europe/Madrid:20211213T235800
+SUMMARY:[Practica GRAU-SIO] Activ 3.2: Presentació final del vostre CorAvis (TO-BE i ROAD-MAP) ...
+UID:practica-99671@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99671
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190119T235900
+DTEND;TZID=Europe/Madrid:20190119T235900
+SUMMARY:[Practica GRAU-CSI] Activ INT - Lliurament integrat AS-IS + TO-BE + ROADMAP
+UID:practica-54105@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=54105
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20170515T235900
+DTEND;TZID=Europe/Madrid:20170515T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 2.1 DOC PRESENTACIÓ - &quot\;TO BE&quot\; - Generació d'escenari futur millor...
+UID:practica-44546@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=44546
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20201020T235800
+DTEND;TZID=Europe/Madrid:20201020T235800
+SUMMARY:[Practica GRAU-SIO] Activ 1.2: AS-IS per RuralTour- Anàlisi DAFO de la situació actual ...
+UID:practica-80365@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80365
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181209T235900
+DTEND;TZID=Europe/Madrid:20181209T235900
+SUMMARY:[Practica GRAU-CSI] Activ 2.2: TO-BE Generació d'un Business Model Canvas per Forum...
+UID:practica-52886@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=52886
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161117T175900
+DTEND;TZID=Europe/Madrid:20161117T175900
+SUMMARY:[Practica GRAU-CSI] Entrega de trabajos individuales y ppts sesion 14/11/16
+UID:practica-41686@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=41686
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200623T235900
+DTEND;TZID=Europe/Madrid:20200623T235900
+SUMMARY:[Practica GRAU-SIO] Activ INT per ProNovAps - Lliurament integrat AS-IS + TO-BE + ROADMAP ...
+UID:practica-70291@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=70291
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210525T235700
+DTEND;TZID=Europe/Madrid:20210525T235700
+SUMMARY:[Practica GRAU-SIO] Activ 3.1: ROAD-MAP per FutFulFan - Des de l'AS-IS fins el TO-BE ...
+UID:practica-90190@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90190
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160610T235900
+DTEND;TZID=Europe/Madrid:20160610T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 3.1 &quot\;ROAD-MAP&quot\; - Full de ruta per arribar des de l'AS-IS fins el TO-BE
+UID:practica-39863@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=39863
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210318T235700
+DTEND;TZID=Europe/Madrid:20210318T235700
+SUMMARY:[Practica GRAU-SIO] Activ 1.1: AS-IS per FutFulFan - Estat de l'art i modelització (anticipada)...
+UID:practica-90184@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90184
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20170306T235900
+DTEND;TZID=Europe/Madrid:20170306T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.Visita: Apuntar-se per visita a una ESA (Subhastes Bonanova)...
+UID:practica-43703@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=43703
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180110T100200
+DTEND;TZID=Europe/Madrid:20180110T235900
+SUMMARY:[Practica GRAU-CSI] Presentació final del treball sobre &quot\;Fer Exposicions&quot\;...
+UID:practica-48124@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=48124
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210623T235900
+DTEND;TZID=Europe/Madrid:20210623T235900
+SUMMARY:[Practica GRAU-SIO] CSIO - TOTS ELS ENLLAÇOS G-Meet per a seguir l'assignatura  ...
+UID:practica-90843@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90843
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160603T235900
+DTEND;TZID=Europe/Madrid:20160603T235900
+SUMMARY:[Practica GRAU-SIO] APLICACIÓ FEEDBACK Activitat 2.1 &quot\;To Be&quot\; - Generació d'escenari futur millor...
+UID:practica-39705@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=39705
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191014T235900
+DTEND;TZID=Europe/Madrid:20191014T235900
+SUMMARY:[Practica GRAU-CSI] Activ 1.2: AS-IS per SCOPE Anàlisi DAFO de la situació actual ...
+UID:practica-61085@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=61085
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191025T092100
+DTEND;TZID=Europe/Madrid:20191025T092100
+SUMMARY:[Practica GRAU-SIO] Activ 1.2: AS-IS per SCOPE Anàlisi DAFO de la situació actual ...
+UID:practica-61086@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=61086
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200324T235900
+DTEND;TZID=Europe/Madrid:20200324T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.1: AS-IS per ProNovAps - Estat de l'art i modelització (anticipada)...
+UID:practica-70285@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=70285
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191025T092100
+DTEND;TZID=Europe/Madrid:20191025T092100
+SUMMARY:[Practica GRAU-SIO] Activ 1.1: AS-IS per SCOPE - Estat de l'art i modelització (anticipada)...
+UID:practica-61084@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=61084
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190119T235900
+DTEND;TZID=Europe/Madrid:20190119T235900
+SUMMARY:[Practica GRAU-SIO] Activ INT - Lliurament integrat AS-IS + TO-BE + ROADMAP
+UID:practica-54104@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=54104
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200604T235800
+DTEND;TZID=Europe/Madrid:20200604T235800
+SUMMARY:[Practica GRAU-SIO] Activ 3.1: ROAD-MAP per ProNovAps - Des de l'AS-IS fins el TO-BE ...
+UID:practica-70289@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=70289
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190920T235900
+DTEND;TZID=Europe/Madrid:20190920T235900
+SUMMARY:[Practica GRAU-CSI] Activ. 0.0: Formació de grups-equips per la pràctica de CSI ...
+UID:practica-60383@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=60383
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160603T235900
+DTEND;TZID=Europe/Madrid:20160603T235900
+SUMMARY:[Practica GRAU-SIO] APLICACIÓ FEEDBACK - Activitat 1.1 Modelització del TFG...
+UID:practica-39683@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=39683
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191118T235900
+DTEND;TZID=Europe/Madrid:20191118T235900
+SUMMARY:[Practica GRAU-CSI] Activ 2.1: TO-BE per SCOPE - Generació-modelització d'un escenari futur ...
+UID:practica-61087@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=61087
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20201020T235700
+DTEND;TZID=Europe/Madrid:20201020T235700
+SUMMARY:[Practica GRAU-SIO] Activ 1.1: AS-IS per RuralTour - Estat de l'art i modelització (anticipada)...
+UID:practica-80364@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80364
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180223T235900
+DTEND;TZID=Europe/Madrid:20180223T235900
+SUMMARY:[Practica GRAU-SIO] Activ 0.0: Formar i informar-me dels grups-parelles de pràctica de SIO...
+UID:practica-48766@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=48766
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160520T235900
+DTEND;TZID=Europe/Madrid:20160520T235900
+SUMMARY:[Practica GRAU-AS] Lliurament 3 de la Pràctica (Capa Presentació)
+UID:practica-39568@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-AS&id=39568
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161003T175900
+DTEND;TZID=Europe/Madrid:20161003T175900
+SUMMARY:[Practica GRAU-CSI] Entrega de trabajos individuales y ppts sesion 03/10/16
+UID:practica-40831@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=40831
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200113T235900
+DTEND;TZID=Europe/Madrid:20200113T235900
+SUMMARY:[Practica GRAU-SIO] Activ CT de SIO - Codi de conducta SCOPE a partir d'un còdi ètic informàtic...
+UID:practica-65603@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=65603
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160417T235900
+DTEND;TZID=Europe/Madrid:20160417T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 1.1: As-is - Modelització del domini TFG del GEI amb Archimate...
+UID:practica-38587@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=38587
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211213T235900
+DTEND;TZID=Europe/Madrid:20211213T235900
+SUMMARY:[Practica GRAU-SIO] Activ 3.3: Breu resum executiu de la vostra resolució CorAvis (CT G4.3) ...
+UID:practica-99672@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99672
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190320T235900
+DTEND;TZID=Europe/Madrid:20190320T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.2: AS-IS Anàlisi actual DAFO de la iniciativa &quot\;CelebriTICs&quot\;...
+UID:practica-54625@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=54625
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180129T235900
+DTEND;TZID=Europe/Madrid:20180129T235900
+SUMMARY:[Practica GRAU-SIO] Activitat CT de SIO - Vostra iniciativa empresarial &quot\;ExhiBits&quot\; i un codi ètic...
+UID:practica-48243@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=48243
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211025T235900
+DTEND;TZID=Europe/Madrid:20211025T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.3: Anàlisi i prospectiva de CorAvis des de la CT G2.3 de CSIO ...
+UID:practica-99666@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99666
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180110T095800
+DTEND;TZID=Europe/Madrid:20180110T235900
+SUMMARY:[Practica GRAU-SIO] Presentació final del treball sobre &quot\;Fer Exposicions&quot\;...
+UID:practica-48123@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=48123
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20220131T235900
+DTEND;TZID=Europe/Madrid:20220131T235900
+SUMMARY:[Practica GRAU-SIO] MINI-PROTOCOL D'INTERACCIÓ AMB CorAvis
+UID:practica-101965@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=101965
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190501T235800
+DTEND;TZID=Europe/Madrid:20190501T235800
+SUMMARY:[Practica GRAU-SIO] Activ 2.1: TO-BE Generació -modelització d'un escenari futur per CelebriTICs...
+UID:practica-54627@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=54627
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160613T235900
+DTEND;TZID=Europe/Madrid:20160613T235900
+SUMMARY:[Practica GRAU-SIO] Activitat CT - Extensió &quot\;socràtica&quot\; de Guia-Estudiant-TFG amb codis ètics...
+UID:practica-40045@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=40045
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20171128T235900
+DTEND;TZID=Europe/Madrid:20171128T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 2.1: &quot\;TO BE&quot\; Generació i presentació d'escenari millor futur...
+UID:practica-46906@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=46906
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161222T235900
+DTEND;TZID=Europe/Madrid:20161222T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 1.1 BIS - REENTREGA PER PUJAR NOTA...
+UID:practica-42583@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=42583
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210621T114500
+DTEND;TZID=Europe/Madrid:20210621T114500
+SUMMARY:[Practica GRAU-SIO] Activ INT per FutFulFan - Lliurament integrat AS-IS + TO-BE + ROADMAP ...
+UID:practica-90193@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90193
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190320T235900
+DTEND;TZID=Europe/Madrid:20190320T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.1: AS-IS Modelització (anticipada) del domini 'CelebriTICs'...
+UID:practica-54626@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=54626
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160525T150000
+DTEND;TZID=Europe/Madrid:20160525T150000
+SUMMARY:[Practica GRAU-AS] 4rt Exercici Entregable
+UID:practica-39710@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-AS&id=39710
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161017T175900
+DTEND;TZID=Europe/Madrid:20161017T175900
+SUMMARY:[Practica GRAU-CSI] Entrega de trabajos individuales y ppts sesion 17/10/16
+UID:practica-41124@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=41124
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20201201T235700
+DTEND;TZID=Europe/Madrid:20201201T235700
+SUMMARY:[Practica GRAU-SIO] Activ 2.1: TO-BE per RuralTour- Generació-modelització d'un escenari futur ...
+UID:practica-80383@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80383
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180515T235900
+DTEND;TZID=Europe/Madrid:20180515T235900
+SUMMARY:[Practica GRAU-SIO] Act 2.2: Qüestions de Negoci i de SI/TI per a RM i Datamix...
+UID:practica-50303@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=50303
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181209T235900
+DTEND;TZID=Europe/Madrid:20181209T235900
+SUMMARY:[Practica GRAU-CSI] Activ 2.1: TO-BE Generació i modelització d'un escenari futur per Forum...
+UID:practica-52884@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=52884
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160919T175900
+DTEND;TZID=Europe/Madrid:20160919T175900
+SUMMARY:[Practica GRAU-CSI] Entrega de trabajos individuales ( y del ppt del grupo) de la sesion del dia 19
+UID:practica-40570@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=40570
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161219T131600
+DTEND;TZID=Europe/Madrid:20161219T203000
+SUMMARY:[Practica GRAU-SIO] Activitat PRESENTACIÓ PÚBLICA AS-IS + TO-BE [+ ROAD-MAP provisional ]...
+UID:practica-42586@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=42586
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180523T235900
+DTEND;TZID=Europe/Madrid:20180523T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.1: TO-BE Generació i presentació d'escenari futur per 'ESC'...
+UID:practica-49245@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=49245
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161110T235900
+DTEND;TZID=Europe/Madrid:20161110T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.1 - AS-IS: Modelització de l'estat actual dels &quot\;DIs de la Gene&quot\;...
+UID:practica-40913@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=40913
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160419T235900
+DTEND;TZID=Europe/Madrid:20160419T235900
+SUMMARY:[Practica GRAU-AS] Lliurament 1 de la Pràctica (Capa Domini)
+UID:practica-38614@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-AS&id=38614
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160219T235900
+DTEND;TZID=Europe/Madrid:20160219T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 0: Conformació dels grups de Laboratori de SIO...
+UID:practica-38044@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=38044
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20171228T235900
+DTEND;TZID=Europe/Madrid:20171228T235900
+SUMMARY:[Practica GRAU-CSI] Activitat 3.1 &quot\;ROAD-MAP&quot\; - Des de l'AS-IS fins el TO-BE per &quot\;Fer Exposicions&quot\;...
+UID:practica-47544@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=47544
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211122T235700
+DTEND;TZID=Europe/Madrid:20211122T235700
+SUMMARY:[Practica GRAU-SIO] Activ 2.1: TO-BE per CorAvis - Generació-modelització d'un escenari futur ...
+UID:practica-99667@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99667
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160603T235900
+DTEND;TZID=Europe/Madrid:20160603T235900
+SUMMARY:[Practica GRAU-SIO] Visita al Barça el proper quatri: Aviseu els no SI que volgueu venir...
+UID:practica-39685@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=39685
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180610T235900
+DTEND;TZID=Europe/Madrid:20180610T235900
+SUMMARY:[Practica GRAU-SIO] Activ 3.1 ROAD-MAP Des de l'AS-IS fins el TO-BE per &quot\;ESC&quot\;...
+UID:practica-49246@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=49246
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20220117T114500
+DTEND;TZID=Europe/Madrid:20220117T114500
+SUMMARY:[Practica GRAU-SIO] Activ INT per CorAvis - Lliurament integrat AS-IS + TO-BE + ROADMAP ...
+UID:practica-99673@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99673
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200512T235900
+DTEND;TZID=Europe/Madrid:20200512T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.2: TO-BE per ProNovAps - Generació d'un Business Model Canvas ... 
+UID:practica-70288@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=70288
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210525T235800
+DTEND;TZID=Europe/Madrid:20210525T235800
+SUMMARY:[Practica GRAU-SIO] Activ 3.2: Presentació final del vostre FutFulFan (TO-BE i ROAD-MAP) ...
+UID:practica-90191@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90191
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160613T235900
+DTEND;TZID=Europe/Madrid:20160613T235900
+SUMMARY:[Practica GRAU-AS] Lliurament 4 de la Pràctica (Implementació)
+UID:practica-39711@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-AS&id=39711
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20171228T235900
+DTEND;TZID=Europe/Madrid:20171228T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 3.1 &quot\;ROAD-MAP&quot\; - Des de l'AS-IS fins el TO-BE per &quot\;Fer Exposicions&quot\;...
+UID:practica-47543@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=47543
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160922T235900
+DTEND;TZID=Europe/Madrid:20160922T235900
+SUMMARY:[Practica GRAU-SIO] OPC - Activitat 0.1: Vostres escrits del debat &quot\;Arquitectura vs. Informàtica&quot\;...
+UID:practica-40744@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=40744
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20201223T235700
+DTEND;TZID=Europe/Madrid:20201223T235700
+SUMMARY:[Practica GRAU-SIO] Activ 3.1: ROAD-MAP per RuralTour - Des de l'AS-IS fins el TO-BE ...
+UID:practica-80403@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80403
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161107T175900
+DTEND;TZID=Europe/Madrid:20161107T175900
+SUMMARY:[Practica GRAU-CSI] entrega de trabajo individual sesion Organizaciones orientadas al dato
+UID:practica-41605@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=41605
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20171128T235900
+DTEND;TZID=Europe/Madrid:20171128T235900
+SUMMARY:[Practica GRAU-CSI] Activitat 2.1: &quot\;TO BE&quot\; Generació i presentació d'escenari millor futur...
+UID:practica-46907@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=46907
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211025T235800
+DTEND;TZID=Europe/Madrid:20211025T235800
+SUMMARY:[Practica GRAU-SIO] Activ 1.2: AS-IS per CorAvis - Anàlisi DAFO de la situació actual ...
+UID:practica-99665@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99665
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210117T235700
+DTEND;TZID=Europe/Madrid:20210117T235700
+SUMMARY:[Practica GRAU-SIO] Activ INT per RuralTour - Lliurament integrat AS-IS + TO-BE + ROADMAP ...
+UID:practica-80405@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80405
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160916T235900
+DTEND;TZID=Europe/Madrid:20160916T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 0.0: Vostres propostes de conformació dels grups de SIO...
+UID:practica-40649@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=40649
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190630T235900
+DTEND;TZID=Europe/Madrid:20190630T235900
+SUMMARY:[Practica GRAU-SIO] Activ. CT de SIO: Mapa concept. de 2 declaracions sobre sistemes IA...
+UID:practica-59343@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=59343
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20201020T235900
+DTEND;TZID=Europe/Madrid:20201020T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.3: Anàlisi i prospectiva de RuralTour des de la CT G2.3 de CSIO ...
+UID:practica-80423@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80423
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181104T235900
+DTEND;TZID=Europe/Madrid:20181104T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.1: AS-IS Modelització de l'estat actual del domini &quot\;ForumFIB&quot\;...
+UID:practica-51962@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=51962
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191220T082000
+DTEND;TZID=Europe/Madrid:20191220T082000
+SUMMARY:[Practica GRAU-SIO] Activ 3.2 : Presentació pública d'SCOPE (TO-BE i ROAD-MAP) ...
+UID:practica-61094@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=61094
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191216T235900
+DTEND;TZID=Europe/Madrid:20191216T235900
+SUMMARY:[Practica GRAU-SIO] Activ 3.1: ROAD-MAP per SCOPE - Des de l'AS-IS fins el TO-BE ...
+UID:practica-61092@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=61092
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20201201T235800
+DTEND;TZID=Europe/Madrid:20201201T235800
+SUMMARY:[Practica GRAU-SIO] Activ 2.2: TO-BE per RuralTour - Generació d'un Business Model Canvas ... 
+UID:practica-80384@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80384
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161222T235900
+DTEND;TZID=Europe/Madrid:20161222T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 2.1 BIS - REENTREGA PER PUJAR NOTA...
+UID:practica-42584@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=42584
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211006T235600
+DTEND;TZID=Europe/Madrid:20211006T235600
+SUMMARY:[Practica GRAU-SIO] Activ 0.0: Formació de equips per la pràctica CorAvis de CSIO ...
+UID:practica-99663@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99663
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20170926T235900
+DTEND;TZID=Europe/Madrid:20170926T235900
+SUMMARY:[Practica GRAU-CSI] Activitat 0.0: Formació de grups-parelles de pràctica...
+UID:practica-46067@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=46067
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200217T235900
+DTEND;TZID=Europe/Madrid:20200217T235900
+SUMMARY:[Practica GRAU-SIO] Activ. 0.0: Formació de equips per la pràctica de SIO ... 
+UID:practica-69345@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=69345
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191216T235900
+DTEND;TZID=Europe/Madrid:20191216T235900
+SUMMARY:[Practica GRAU-CSI] Activ 3.1: ROAD-MAP per SCOPE - Des de l'AS-IS fins el TO-BE ...
+UID:practica-61091@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=61091
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161223T235900
+DTEND;TZID=Europe/Madrid:20161223T235900
+SUMMARY:[Practica GRAU-CSI] Entrega ponencias
+UID:practica-42443@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=42443
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161010T175900
+DTEND;TZID=Europe/Madrid:20161010T175900
+SUMMARY:[Practica GRAU-CSI] Entrega de trabajos individuales y ppts sesion 10/10/16
+UID:practica-40979@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=40979
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20201223T235900
+DTEND;TZID=Europe/Madrid:20201223T235900
+SUMMARY:[Practica GRAU-SIO] Activ 3.3: Breu resum executiu de la vostra resolució RuralTour (CT G4.3) ... 
+UID:practica-80425@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80425
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181209T235900
+DTEND;TZID=Europe/Madrid:20181209T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.2: TO-BE Generació d'un Business Model Canvas per Forum...
+UID:practica-52885@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=52885
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20220130T235900
+DTEND;TZID=Europe/Madrid:20220130T235900
+SUMMARY:[Practica GRAU-SIO] CSIO - DOCUMENTS PRINCIPALS dels mòduls centrals de T/P de l'assignatura  ...
+UID:practica-99683@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99683
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20171107T235900
+DTEND;TZID=Europe/Madrid:20171107T235900
+SUMMARY:[Practica GRAU-CSI] Activ 1.1: AS-IS Modelització de l'estat actual del domini &quot\;Fer exposicions&quot\;...
+UID:practica-46366@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=46366
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200512T235900
+DTEND;TZID=Europe/Madrid:20200512T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.1: TO-BE per ProNovAps - Generació-modelització d'un escenari futur ...
+UID:practica-70287@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=70287
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211025T235700
+DTEND;TZID=Europe/Madrid:20211025T235700
+SUMMARY:[Practica GRAU-SIO] Activ 1.1: AS-IS per CorAvis - Estat de l'art i modelització (anticipada)...
+UID:practica-99664@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99664
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190219T235900
+DTEND;TZID=Europe/Madrid:20190219T235900
+SUMMARY:[Practica GRAU-SIO] Activ. 0.0: Formació de grups-equips per la pràctica de SIO ... 
+UID:practica-54624@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=54624
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200604T235900
+DTEND;TZID=Europe/Madrid:20200604T235900
+SUMMARY:[Practica GRAU-SIO] Activ 3.2 : Presentació pública del ProNovAps (TO-BE i ROAD-MAP) ...
+UID:practica-70290@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=70290
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181218T145900
+DTEND;TZID=Europe/Madrid:20181218T145900
+SUMMARY:[Practica GRAU-SIO] Activ 3.2 : Presentació pública del TO-BE i avenç del ROAD-MAP...
+UID:practica-53557@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=53557
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211213T235700
+DTEND;TZID=Europe/Madrid:20211213T235700
+SUMMARY:[Practica GRAU-SIO] Activ 3.1: ROAD-MAP per CorAvis - Des de l'AS-IS fins el TO-BE ...
+UID:practica-99670@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99670
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190501T235900
+DTEND;TZID=Europe/Madrid:20190501T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.2: TO-BE Generació d'un Business Model Canvas per 'CelebriTICs'... 
+UID:practica-54628@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=54628
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160302T150000
+DTEND;TZID=Europe/Madrid:20160302T150000
+SUMMARY:[Practica GRAU-AS] 1er Exercici Entregable
+UID:practica-38149@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-AS&id=38149
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181209T235900
+DTEND;TZID=Europe/Madrid:20181209T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.1: TO-BE Generació i modelització d'un escenari futur per Forum...
+UID:practica-52883@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=52883
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191014T235900
+DTEND;TZID=Europe/Madrid:20191014T235900
+SUMMARY:[Practica GRAU-CSI] Activ 1.1: AS-IS per SCOPE - Estat de l'art i modelització (anticipada)...
+UID:practica-61083@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=61083
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20170417T235900
+DTEND;TZID=Europe/Madrid:20170417T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.1: AS-IS Modelització de l'estat actual de les ESAs...
+UID:practica-43485@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=43485
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210303T235600
+DTEND;TZID=Europe/Madrid:20210303T235600
+SUMMARY:[Practica GRAU-SIO] Activ 0.0: Formació de equips per la pràctica FutFulFan de CSIO ...
+UID:practica-90183@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90183
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210502T235700
+DTEND;TZID=Europe/Madrid:20210502T235700
+SUMMARY:[Practica GRAU-SIO] 	Activ 2.1: TO-BE per FutFulFan - Generació-modelització d'un escenari futur ...
+UID:practica-90187@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90187
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191118T235900
+DTEND;TZID=Europe/Madrid:20191118T235900
+SUMMARY:[Practica GRAU-CSI] Activ 2.2: TO-BE per SCOPE - Generació d'un Business Model Canvas ... 
+UID:practica-61089@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=61089
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210624T235900
+DTEND;TZID=Europe/Madrid:20210624T235900
+SUMMARY:[Practica GRAU-SIO] FutFulFan - &quot\;Futbol Full Fan Experience&quot\; - L'enunciat... en evolució ...
+UID:practica-90783@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90783
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200921T150000
+DTEND;TZID=Europe/Madrid:20200921T150000
+SUMMARY:[Practica GRAU-SIO] Activ. 0.0: Formació de equips per la pràctica RuralTour de CSIO ... 
+UID:practica-80363@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80363
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210318T235800
+DTEND;TZID=Europe/Madrid:20210318T235800
+SUMMARY:[Practica GRAU-SIO] Activ 1.2: AS-IS per FutFulFan - Anàlisi DAFO de la situació actual ...
+UID:practica-90185@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90185
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181104T235900
+DTEND;TZID=Europe/Madrid:20181104T235900
+SUMMARY:[Practica GRAU-CSI] Activ 1.2: AS-IS Anàlisi de negoci de l'estat actual del domini &quot\;ForumFIB&quot\;...
+UID:practica-51964@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=51964
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210622T235900
+DTEND;TZID=Europe/Madrid:20210622T235900
+SUMMARY:[Practica GRAU-SIO] CSIO - CALENDARI PREVIST inicial dels mòduls de T/P de l'assignatura  ...
+UID:practica-91345@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=91345
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191219T235900
+DTEND;TZID=Europe/Madrid:20191219T235900
+SUMMARY:[Practica GRAU-CSI] Activ 3.2 : Presentació pública d'SCOPE (TO-BE i ROAD-MAP) ...
+UID:practica-61093@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=61093
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191220T235900
+DTEND;TZID=Europe/Madrid:20191220T235900
+SUMMARY:[Practica GRAU-SIO] Activ INT per SCOPE - Lliurament integrat AS-IS + TO-BE + ROADMAP ...
+UID:practica-61096@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=61096
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190527T235900
+DTEND;TZID=Europe/Madrid:20190527T235900
+SUMMARY:[Practica GRAU-SIO] Activ 3.1: ROAD-MAP Des de l'AS-IS fins el TO-BE per 'CelebriTICs'..
+UID:practica-54629@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=54629
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161107T163700
+DTEND;TZID=Europe/Madrid:20161107T190000
+SUMMARY:[Practica GRAU-CSI] Entrega de trabajos individuales y ppts sesion 07/11/16
+UID:practica-41685@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=41685
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211122T235800
+DTEND;TZID=Europe/Madrid:20211122T235800
+SUMMARY:[Practica GRAU-SIO] Activ 2.2: TO-BE per CorAvis - Generació d'un Business Model Canvas ...
+UID:practica-99668@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99668
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160518T105500
+DTEND;TZID=Europe/Madrid:20160518T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 2.1 DOC PRESENTACIÓ - &quot\;To Be&quot\; - Generació d'escenari futur millor...
+UID:practica-39684@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=39684
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20170216T235900
+DTEND;TZID=Europe/Madrid:20170216T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 0: Conformar els grups de SIO...
+UID:practica-43270@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=43270
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20211122T235900
+DTEND;TZID=Europe/Madrid:20211122T235900
+SUMMARY:[Practica GRAU-SIO] Activ 2.3: Vídeo &quot\;elevator pitch&quot\; de la vostra proposta CorAvis (CT G4.2) ...
+UID:practica-99669@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=99669
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20170609T235900
+DTEND;TZID=Europe/Madrid:20170609T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 3.1 &quot\;ROAD-MAP&quot\; - Des de l'AS-IS fins el TO-BE per les ESAs...
+UID:practica-45129@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=45129
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190920T235900
+DTEND;TZID=Europe/Madrid:20190920T235900
+SUMMARY:[Practica GRAU-SIO] Activ. 0.0: Formació de grups-equips per la pràctica de SIO ... 
+UID:practica-60366@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=60366
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160612T235900
+DTEND;TZID=Europe/Madrid:20160612T235900
+SUMMARY:[Practica GRAU-AS] Autoevaluació i la avaluació entre companys de la pràctica
+UID:practica-40143@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-AS&id=40143
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190119T235900
+DTEND;TZID=Europe/Madrid:20190119T235900
+SUMMARY:[Practica GRAU-SIO] Activ 3.1: ROAD-MAP Des de l'AS-IS fins el TO-BE per &quot\;FòrumFIB&quot\;..
+UID:practica-53555@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=53555
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20201223T235800
+DTEND;TZID=Europe/Madrid:20201223T235800
+SUMMARY:[Practica GRAU-SIO] Activ 3.2 : Presentació final del vostre RuralTour (TO-BE i ROAD-MAP) ...
+UID:practica-80404@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=80404
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180927T235900
+DTEND;TZID=Europe/Madrid:20180927T235900
+SUMMARY:[Practica GRAU-SIO] Activ. 0.0: Formació de grups-equips per la pràctica de SIO ...  
+UID:practica-51960@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=51960
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20200623T235900
+DTEND;TZID=Europe/Madrid:20200623T235900
+SUMMARY:[Practica GRAU-SIO] Activ CT de SIO - Codi conducta ProNovAps a partir d'un còdi ètic informàtic...
+UID:practica-70292@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=70292
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210318T235900
+DTEND;TZID=Europe/Madrid:20210318T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.3: Anàlisi i prospectiva de FutFulFan des de la CT G2.3 de CSIO ...
+UID:practica-90186@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90186
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181104T235900
+DTEND;TZID=Europe/Madrid:20181104T235900
+SUMMARY:[Practica GRAU-CSI] Activ 1.1: AS-IS Modelització de l'estat actual del domini &quot\;ForumFIB&quot\;...
+UID:practica-51961@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=51961
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20210525T235900
+DTEND;TZID=Europe/Madrid:20210525T235900
+SUMMARY:[Practica GRAU-SIO] Activ 3.3: Breu resum executiu de la vostra resolució FutFulFan (CT G4.3) ...
+UID:practica-90192@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=90192
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181218T145900
+DTEND;TZID=Europe/Madrid:20181218T145900
+SUMMARY:[Practica GRAU-CSI] Activ 3.2 : Presentació pública del TO-BE i avenç del ROAD-MAP...
+UID:practica-53556@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=53556
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180630T235900
+DTEND;TZID=Europe/Madrid:20180630T235900
+SUMMARY:[Practica GRAU-SIO] Activ. CT de SIO: Com preparar-me per a esdevenir un T-shaped FIBer...  ...
+UID:practica-50787@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=50787
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20190603T235900
+DTEND;TZID=Europe/Madrid:20190603T235900
+SUMMARY:[Practica GRAU-SIO] Activ INT - Lliurament integrat AS-IS + TO-BE + ROADMAP per 'CelebriTICs'...
+UID:practica-54631@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=54631
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20180927T235900
+DTEND;TZID=Europe/Madrid:20180927T235900
+SUMMARY:[Practica GRAU-CSI] Activ. 0.0: Formació de grups-equips per la pràctica de CSI ...
+UID:practica-51959@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=51959
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20191220T235900
+DTEND;TZID=Europe/Madrid:20191220T235900
+SUMMARY:[Practica GRAU-CSI] Activ INT per SCOPE - Lliurament integrat AS-IS + TO-BE + ROADMAP ...
+UID:practica-61095@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=61095
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20161208T235900
+DTEND;TZID=Europe/Madrid:20161208T235900
+SUMMARY:[Practica GRAU-SIO] Activitat 2.1 DOC PRESENTACIÓ - &quot\;TO BE&quot\; - Generació d'escenari futur millor...
+UID:practica-41939@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=41939
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20181104T235900
+DTEND;TZID=Europe/Madrid:20181104T235900
+SUMMARY:[Practica GRAU-SIO] Activ 1.2: AS-IS Anàlisi negoci de l'estat actual del domini &quot\;ForumFIB&quot\;...
+UID:practica-51963@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-SIO&id=51963
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;TZID=Europe/Madrid:20160926T175900
+DTEND;TZID=Europe/Madrid:20160926T175900
+SUMMARY:[Practica GRAU-CSI] Entrega de trabajos individuales y ppts sesion 26/9/16
+UID:practica-40735@raco.fib.upc.edu
+URL:https://raco.fib.upc.edu/practiques/practica.jsp?assig=GRAU-CSI&id=40735
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20210924
+DTEND;VALUE=DATE:20210925
+SUMMARY:FESTIU
+UID:lectiu-24092021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211012
+DTEND;VALUE=DATE:20211013
+SUMMARY:FESTIU
+UID:lectiu-12102021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211101
+DTEND;VALUE=DATE:20211102
+SUMMARY:FESTIU
+UID:lectiu-01112021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211206
+DTEND;VALUE=DATE:20211207
+SUMMARY:FESTIU
+UID:lectiu-06122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211207
+DTEND;VALUE=DATE:20211208
+SUMMARY:FESTIU
+UID:lectiu-07122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211208
+DTEND;VALUE=DATE:20211209
+SUMMARY:FESTIU
+UID:lectiu-08122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211223
+DTEND;VALUE=DATE:20211224
+SUMMARY:VACANCES
+UID:lectiu-23122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211224
+DTEND;VALUE=DATE:20211225
+SUMMARY:VACANCES
+UID:lectiu-24122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211225
+DTEND;VALUE=DATE:20211226
+SUMMARY:VACANCES
+UID:lectiu-25122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211226
+DTEND;VALUE=DATE:20211227
+SUMMARY:VACANCES
+UID:lectiu-26122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211227
+DTEND;VALUE=DATE:20211228
+SUMMARY:VACANCES
+UID:lectiu-27122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211228
+DTEND;VALUE=DATE:20211229
+SUMMARY:VACANCES
+UID:lectiu-28122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211229
+DTEND;VALUE=DATE:20211230
+SUMMARY:VACANCES
+UID:lectiu-29122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211230
+DTEND;VALUE=DATE:20211231
+SUMMARY:VACANCES
+UID:lectiu-30122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20211231
+DTEND;VALUE=DATE:20220101
+SUMMARY:VACANCES
+UID:lectiu-31122021@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220101
+DTEND;VALUE=DATE:20220102
+SUMMARY:VACANCES
+UID:lectiu-01012022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220102
+DTEND;VALUE=DATE:20220103
+SUMMARY:VACANCES
+UID:lectiu-02012022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220103
+DTEND;VALUE=DATE:20220104
+SUMMARY:VACANCES
+UID:lectiu-03012022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220104
+DTEND;VALUE=DATE:20220105
+SUMMARY:VACANCES
+UID:lectiu-04012022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220105
+DTEND;VALUE=DATE:20220106
+SUMMARY:VACANCES
+UID:lectiu-05012022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220106
+DTEND;VALUE=DATE:20220107
+SUMMARY:VACANCES
+UID:lectiu-06012022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220411
+DTEND;VALUE=DATE:20220412
+SUMMARY:VACANCES
+UID:lectiu-11042022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220412
+DTEND;VALUE=DATE:20220413
+SUMMARY:VACANCES
+UID:lectiu-12042022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220413
+DTEND;VALUE=DATE:20220414
+SUMMARY:VACANCES
+UID:lectiu-13042022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220414
+DTEND;VALUE=DATE:20220415
+SUMMARY:VACANCES
+UID:lectiu-14042022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220415
+DTEND;VALUE=DATE:20220416
+SUMMARY:VACANCES
+UID:lectiu-15042022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220416
+DTEND;VALUE=DATE:20220417
+SUMMARY:VACANCES
+UID:lectiu-16042022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220417
+DTEND;VALUE=DATE:20220418
+SUMMARY:VACANCES
+UID:lectiu-17042022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220418
+DTEND;VALUE=DATE:20220419
+SUMMARY:VACANCES
+UID:lectiu-18042022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220506
+DTEND;VALUE=DATE:20220507
+SUMMARY:FESTA FIB
+UID:lectiu-06052022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220606
+DTEND;VALUE=DATE:20220607
+SUMMARY:FESTIU
+UID:lectiu-06062022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20211006T115629Z
+DTSTART;VALUE=DATE:20220624
+DTEND;VALUE=DATE:20220625
+SUMMARY:FESTIU
+UID:lectiu-24062022@raco.fib.upc.edu
+URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
+END:VEVENT
+END:VCALENDAR
+

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "download": "^8.0.0",
+    "ical": "^0.8.0",
+    "open": "^8.2.1"
+  }
+}
