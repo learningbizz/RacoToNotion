@@ -1468,7 +1468,7 @@ BEGIN:VEVENT
 DTSTAMP:20211006T115629Z
 DTSTART;VALUE=DATE:20220624
 DTEND;VALUE=DATE:20220625
-SUMMARY:FESTIU
+SUMMARY:FEST
 UID:lectiu-24062022@raco.fib.upc.edu
 URL:http://www.fib.upc.edu/fib/estudiar-enginyeria-informatica/calendari-lectiu.html
 END:VEVENT
