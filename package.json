@@ -1,8 +1,33 @@
 {
+  "name": "racotonotion",
+  "version": "1.0.0",
+  "description": "Calendar Sync from Raco FIB to Notion Database",
+  "main": "index.js",
   "dependencies": {
+    "@notionhq/client": "^0.4.2",
     "dotenv": "^10.0.0",
     "download": "^8.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "ical": "^0.8.0",
-    "open": "^8.2.1"
-  }
+    "prettier": "^2.4.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext \".js\" --ignore-path .gitignore .",
+    "format": "eslint --ext \".js\" --ignore-path .gitignore . --fix"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LearningBizz/RacoToNotion.git"
+  },
+  "author": "Manuel Navid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LearningBizz/RacoToNotion/issues"
+  },
+  "homepage": "https://github.com/LearningBizz/RacoToNotion#readme"
 }
