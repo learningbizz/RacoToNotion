@@ -3,6 +3,7 @@ const fs = require('fs');
 const download = require('download');
 const { Client } = require('@notionhq/client');
 const { resolve } = require('path');
+const { type } = require('os');
 
 require('dotenv').config();
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
@@ -40,15 +41,15 @@ async function addOrUpdateNotionCalendar() {
                 ++counterEventsAdded;
                 console.log('New event was found: ' + newIcal[id].summary);
                 await createNotionEvent(newIcal[id]);
-                // Does the await above matter?
-                //console.log('ISO Time: ' + newIcal[id].start.toISOString());
-                //console.log('BCN Time: ' + (await changeUTCtoBarcelonaTime(newIcal[id])) + '\n');
+                // REMOVE AWAIT FOR EXPLOIT CONCURRENCY
             }
             // If the event represented in the id exists in the old calendar and its modified
             else if (!(await checkIcalObjectUpdate(newIcal[id], oldIcal[id]))) {
                 ++counterEventsAdded;
                 console.log(newIcal[id].summary + ' event was found (to update)...');
-                //NEED UPDATE
+                const notionPageId = await queryDatabaseNotion(newIcal[id]);
+                await updateDatabaseNotion(newIcal[id], notionPageId);
+                // REMOVE AWAIT FOR EXPLOIT CONCURRENCY
             }
         }
         if (counterEventsAdded == 1) console.log('\nA total of ' + counterEventsAdded + ' event was created/updated.');
@@ -66,9 +67,6 @@ async function addOrUpdateNotionCalendar() {
 
 /**
  * Compare two calendar events to see if they're the same.
- * @param {*} ical1
- * @param {*} ical2
- * @returns
  */
 async function checkIcalObjectUpdate(ical1, ical2) {
     return (
@@ -80,9 +78,8 @@ async function checkIcalObjectUpdate(ical1, ical2) {
 
 /**
  * Returns the time of the event of Barcelona time (UTC+1) in ISO8601 format
- *
  */
-async function changeUTCtoBarcelonaTime(icalEvent) {
+async function convertUTCtoBarcelonaTime(icalEvent) {
     //Add one hour to the UTC time
     let hourToChange = icalEvent.start.getHours();
     hourToChange += 1;
@@ -94,12 +91,11 @@ async function changeUTCtoBarcelonaTime(icalEvent) {
 }
 
 /**
- * Add an iCal event to the Notion database.
- * @param {*} icalEvent
+ * Add a calendar event (icalEvent) to the Notion database (databaseId).
  */
 async function createNotionEvent(icalEvent) {
     try {
-        const barcelonaTime = await changeUTCtoBarcelonaTime(icalEvent);
+        const barcelonaTime = await convertUTCtoBarcelonaTime(icalEvent);
         const response = await notion.pages.create({
             parent: {
                 database_id: databaseId
@@ -122,11 +118,73 @@ async function createNotionEvent(icalEvent) {
                     date: {
                         start: barcelonaTime
                     }
+                },
+                Id: {
+                    rich_text: [
+                        {
+                            text: {
+                                content: icalEvent.uid
+                            }
+                        }
+                    ]
                 }
             }
         });
         // console.log(response)
         console.log('Success! Event added to the calendar.\n');
+    } catch (error) {
+        console.log('ERROR: ' + error);
+    }
+}
+
+/**
+ * Returns Notion id page from databaseId to be modified
+ */
+async function queryDatabaseNotion(icalEvent) {
+    try {
+        const response = await notion.databases.query({
+            database_id: databaseId,
+            filter: {
+                property: 'Id',
+                rich_text: {
+                    equals: icalEvent.uid
+                }
+            }
+        });
+        //console.log(response.results[0].properties.Name);
+        return response.results[0].id;
+    } catch (error) {
+        console.log('ERROR: ' + error);
+    }
+}
+
+/**
+ * Updates a Notion page (notionPageId) with the icalEvent data
+ */
+async function updateDatabaseNotion(icalEvent, notionPageId) {
+    try {
+        const barcelonaTime = await convertUTCtoBarcelonaTime(icalEvent);
+        const response = await notion.pages.update({
+            page_id: notionPageId,
+            properties: {
+                Name: {
+                    title: [
+                        {
+                            text: {
+                                content: icalEvent.summary
+                            }
+                        }
+                    ]
+                },
+                Date: {
+                    date: {
+                        start: barcelonaTime
+                    }
+                }
+            }
+        });
+        //console.log(response);
+        console.log('Success! Event was updated correctly.\n');
     } catch (error) {
         console.log('ERROR: ' + error);
     }
