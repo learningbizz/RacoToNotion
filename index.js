@@ -40,7 +40,7 @@ async function addOrUpdateNotionCalendar() {
             if (!(id in oldIcal)) {
                 ++counterEventsAdded;
                 console.log('New event was found: ' + newIcal[id].summary);
-                await createNotionEvent(newIcal[id]);
+                createNotionEvent(newIcal[id]);
                 // REMOVE AWAIT FOR EXPLOIT CONCURRENCY
             }
             // If the event represented in the id exists in the old calendar and its modified
@@ -48,7 +48,7 @@ async function addOrUpdateNotionCalendar() {
                 ++counterEventsAdded;
                 console.log(newIcal[id].summary + ' event was found (to update)...');
                 const notionPageId = await queryDatabaseNotion(newIcal[id]);
-                await updateDatabaseNotion(newIcal[id], notionPageId);
+                updateDatabaseNotion(newIcal[id], notionPageId);
                 // REMOVE AWAIT FOR EXPLOIT CONCURRENCY
             }
         }
@@ -105,7 +105,7 @@ async function createNotionEvent(icalEvent) {
                 emoji: '🗒️'
             },
             properties: {
-                Name: {
+                title: {
                     title: [
                         {
                             text: {
@@ -130,8 +130,6 @@ async function createNotionEvent(icalEvent) {
                 }
             }
         });
-        // console.log(response)
-        console.log('Success! Event added to the calendar.\n');
     } catch (error) {
         console.log('ERROR: ' + error);
     }
@@ -151,7 +149,7 @@ async function queryDatabaseNotion(icalEvent) {
                 }
             }
         });
-        //console.log(response.results[0].properties.Name);
+        console.log(response.results[0].properties);
         return response.results[0].id;
     } catch (error) {
         console.log('ERROR: ' + error);
@@ -167,7 +165,7 @@ async function updateDatabaseNotion(icalEvent, notionPageId) {
         const response = await notion.pages.update({
             page_id: notionPageId,
             properties: {
-                Name: {
+                title: {
                     title: [
                         {
                             text: {
@@ -183,9 +181,11 @@ async function updateDatabaseNotion(icalEvent, notionPageId) {
                 }
             }
         });
-        //console.log(response);
-        console.log('Success! Event was updated correctly.\n');
     } catch (error) {
         console.log('ERROR: ' + error);
     }
 }
+
+//npm run start  0,86s user 0,17s system 25% cpu 4,089 total
+//npm run start  1,38s user 0,20s system 0% cpu 2:54,86 total
+//quitando awaits, speedup sube a 43.5x YIKES
