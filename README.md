@@ -61,5 +61,8 @@ Like this:
 
 ![](img/example_database.png)
 
-<br>
+## Usage
 
+```zsh
+npm run start
+```
