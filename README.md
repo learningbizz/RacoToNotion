@@ -51,7 +51,7 @@ Like this:
 
 ## Usage
 
-In the `notionToRaco` directory, open a terminal and run:
+In the `racoToNotion` directory, open a terminal and run:
 
 ```zsh
 npm start
