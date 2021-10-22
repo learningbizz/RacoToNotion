@@ -57,6 +57,9 @@ In the `racoToNotion` directory, open a terminal and run:
 npm start
 ```
 
+## **Extra: Execute the program automatically**
+[I wrote a small article on the wiki page, which you can access here](https://github.com/learningbizz/RacoToNotion/wiki/Automatic-execution)
+
 <br>
 
 # **Reflection**
