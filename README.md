@@ -5,13 +5,13 @@
 </p>
 <br>
 
-_Raco to Notion_ is a script made to be able to sync automatically Raco de la FIB's calendar events with your Notion Database.
+_Raco to Notion_ is a program made to be able to sync automatically Raco de la FIB's calendar events with your Notion Database.
 
 ## **Installation**
 
 ### 1. Setup your local project
 
-To clone and run this script, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this program, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```zsh
 # Clone this repository locally
@@ -40,7 +40,7 @@ You can find out how to find your Notion database ID [here](https://stackoverflo
 
 ### 3. Setup your Notion Database
 
-For this script to work correctly in your Notion Database, there are 2 properties that **MUST EXIST WITH THE SAME NAME AND FORMAT** ⚠️
+For this program to work correctly in your Notion Database, there are 2 properties that **MUST EXIST WITH THE SAME NAME AND FORMAT** ⚠️
 
 -   Date: Property type: Date and Name of the property: `Date`
 -   Id: Property type: Text and Name of the property: `Id`
