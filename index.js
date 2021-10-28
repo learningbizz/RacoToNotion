@@ -41,7 +41,7 @@ async function addOrUpdateNotionCalendar() {
                 ++counterEventsAdded;
                 console.log('New event was found: ' + newIcal[id].summary);
                 createNotionEvent(newIcal[id]);
-                // REMOVE AWAIT FOR EXPLOIT CONCURRENCY
+                // NO AWAIT FOR EXPLOIT CONCURRENCY
             }
             // If the event represented in the id exists in the old calendar and its modified
             else if (!(await checkIcalObjectUpdate(newIcal[id], oldIcal[id]))) {
@@ -49,7 +49,7 @@ async function addOrUpdateNotionCalendar() {
                 console.log(newIcal[id].summary + ' event was found (to update)...');
                 const notionPageId = await queryDatabaseNotion(newIcal[id]);
                 updateDatabaseNotion(newIcal[id], notionPageId);
-                // REMOVE AWAIT FOR EXPLOIT CONCURRENCY
+                // NO AWAIT FOR EXPLOIT CONCURRENCY
             }
         }
         if (counterEventsAdded == 1) console.log('\nA total of ' + counterEventsAdded + ' event was created/updated.');

@@ -15,10 +15,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint --ext \".js\" --ignore-path .gitignore .",
     "format": "eslint --ext \".js\" --ignore-path .gitignore . --fix"
-
   },
   "repository": {
     "type": "git",
@@ -29,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/LearningBizz/RacoToNotion/issues"
   },
-  "homepage": "https://github.com/LearningBizz/RacoToNotion#readme"
+  "homepage": "https://github.com/LearningBizz/RacoToNotion#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
 }
