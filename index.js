@@ -9,6 +9,7 @@ require('dotenv').config();
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 const databaseId = process.env.NOTION_DATABASE_ID;
+module.exports = { addOrUpdateNotionCalendar, checkIcalObjectUpdate };
 
 getNewIcal().then(addOrUpdateNotionCalendar);
 
@@ -68,11 +69,11 @@ async function addOrUpdateNotionCalendar() {
 /**
  * Compare two calendar events to see if they're the same.
  */
-async function checkIcalObjectUpdate(ical1, ical2) {
+async function checkIcalObjectUpdate(icalEvent1, icalEvent2) {
     return (
-        ical1.summary === ical2.summary &&
-        ical1.start.toISOString() === ical2.start.toISOString() &&
-        ical1.end.toISOString() === ical2.end.toISOString()
+        icalEvent1.summary === icalEvent2.summary &&
+        icalEvent1.start.toISOString() === icalEvent2.start.toISOString() &&
+        icalEvent1.end.toISOString() === icalEvent2.end.toISOString()
     );
 }
 
@@ -188,4 +189,4 @@ async function updateDatabaseNotion(icalEvent, notionPageId) {
 
 //npm run start  0,86s user 0,17s system 25% cpu 4,089 total
 //npm run start  1,38s user 0,20s system 0% cpu 2:54,86 total
-//quitando awaits, speedup sube a 43.5x YIKES
+//removing awaits, speedup increases 43.5x YIKES
