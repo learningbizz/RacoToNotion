@@ -108,4 +108,4 @@ dist
 .pnp.*
 
 # extra files
-*.ics
+oldCalendar.ics
