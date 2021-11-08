@@ -13,19 +13,14 @@
  * I also will have to maybe mock the API function calls like updateDatabaseNotino and createNotionEvent
  */
 
-/**
- * found way to simulate newCalendar and oldCalendar
- * Need to find a way to test the different methods (finish thinking about it).
- */
-
 const fs = require('fs');
 const Client = require('@notionhq/client');
 const ical = require('ical');
-const { addOrUpdateNotionCalendar, checkIcalObjectUpdate } = require('../index.js');
+const { addOrUpdateNotionCalendar, checkIcalObjectEqual, convertUTCtoBarcelonaTime } = require('../functions.js');
 const exp = require('constants');
 
 //To mock all the calls to the Notion API
-jest.mock('@notionhq/client');
+//jest.mock('@notionhq/client');
 
 //NO CREO QUE HACE FALTA
 // beforeAll(() => {
@@ -51,28 +46,30 @@ jest.mock('@notionhq/client');
 
 //test('creating a new succesful event', () => {});
 
-test('updating a succesful title change', () => {
-    try {
-        const newIcal = ical.parseFile('./__tests__/newCalendarUpdateTitle.ics');
-        const oldIcal = ical.parseFile('./__tests__/oldCalendarUpdateTitle.ics');
-        for (id in newIcal)
-            checkIcalObjectUpdate(newIcal[id], oldIcal[id]).then((data) => {
-                expect(data).toBe(false);
-            });
-    } catch (error) {
-        console.log(error);
-    }
+// TESTS checkIcalObjectEqual
+test('Check if iCal events are equal: different title', async () => {
+    const newIcal = ical.parseFile('./__tests__/newCalendarUpdateTitle.ics');
+    const oldIcal = ical.parseFile('./__tests__/oldCalendarUpdateTitle.ics');
+    const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(oldIcal)[0]);
+    expect(isEqual).toBe(false);
 });
 
-test('updating a succesful date change', () => {
-    try {
-        const newIcal = ical.parseFile('./__tests__/newCalendarUpdateDate.ics');
-        const oldIcal = ical.parseFile('./__tests__/oldCalendarUpdateDate.ics');
-        for (id in newIcal)
-            checkIcalObjectUpdate(newIcal[id], oldIcal[id]).then((data) => {
-                expect(data).toBe(false);
-            });
-    } catch (error) {
-        console.log(error);
-    }
+test('Check if iCal events are equal: different date', async () => {
+    const newIcal = ical.parseFile('./__tests__/newCalendarUpdateDate.ics');
+    const oldIcal = ical.parseFile('./__tests__/oldCalendarUpdateDate.ics');
+    const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(oldIcal)[0]);
+    expect(isEqual).toBe(false);
+});
+
+test('Check if iCal events are equal: equal events', async () => {
+    const newIcal = ical.parseFile('./__tests__/randomCalendar.ics');
+    const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(newIcal)[0]);
+    expect(isEqual).toBe(true);
+});
+
+// TESTS convertUTCtoBarcelonaTime
+test('Translate UTC to UTC+1', async () => {
+    const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
+    const timeConverted = await convertUTCtoBarcelonaTime(Object.values(calendar)[0]);
+    expect(timeConverted).toBe('2019-11-07T23:59:00.000+01:00');
 });
