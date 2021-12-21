@@ -14,13 +14,23 @@
  */
 
 const fs = require('fs');
-const Client = require('@notionhq/client');
+const { Client } = require('@notionhq/client');
 const ical = require('ical');
-const { addOrUpdateNotionCalendar, checkIcalObjectEqual, convertUTCtoBarcelonaTime } = require('../functions.js');
+const {
+    addOrUpdateNotionCalendar,
+    checkIcalObjectEqual,
+    convertUTCtoBarcelonaTime,
+    queryDatabaseNotion,
+    updateDatabaseNotion,
+    createNotionEvent
+} = require('../functions.js');
 const exp = require('constants');
 
+require('dotenv').config();
+const notion = new Client({ auth: process.env.NOTION_API_KEY });
+
 //To mock all the calls to the Notion API
-//jest.mock('@notionhq/client');
+jest.mock('@notionhq/client');
 
 //NO CREO QUE HACE FALTA
 // beforeAll(() => {
@@ -70,6 +80,45 @@ test('Check if iCal events are equal: equal events', async () => {
 // TESTS convertUTCtoBarcelonaTime
 test('Translate UTC to UTC+1', async () => {
     const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
-    const timeConverted = await convertUTCtoBarcelonaTime(Object.values(calendar)[0]);
+    const timeConverted = await convertUTCtoBarcelonaTime(Object.values(calendar)[0].start);
     expect(timeConverted).toBe('2019-11-07T23:59:00.000+01:00');
 });
+
+//TESTS createNotionEvent
+/**
+test('create Notion event: sucess', async () => {
+    const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
+    const data = {
+        object: 'page',
+        id: '251d2b5f-268c-4de2-afe9-c71ff92ca95c',
+        created_time: '2020-03-17T19:10:04.968Z',
+        last_edited_time: '2020-03-17T21:49:37.913Z',
+        parent: {
+            type: 'database_id',
+            database_id: '48f8fee9-cd79-4180-bc2f-ec0398253067'
+        },
+        icon: {
+            type: 'emoji',
+            emoji: '🎉'
+        },
+        cover: {
+            type: 'external',
+            external: {
+                url: 'https://website.domain/images/image.png'
+            }
+        },
+        archived: false,
+        url: 'https://www.notion.so/Tuscan-Kale-251d2b5f268c4de2afe9c71ff92ca95c',
+        properties: {
+            Recipes: {
+                id: 'Ai`L',
+                type: 'relation',
+                relation: []
+            }
+        }
+    };
+    const response = notion.pages.create.mockResolvedValues(data);
+    await createNotionEvent(Object.values(calendar)[0]);
+    expect(response).toHaveBeenCalled();
+});
+*/

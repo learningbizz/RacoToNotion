@@ -55,9 +55,9 @@ async function addOrUpdateNotionCalendar() {
         else console.log('\nA total of ' + counterEventsAdded + ' events were created/updated.');
 
         // Replace the old Calendar with the new one, so when the program is executed again the old version is updated.
-        fs.rename('./newCalendar.ics', './oldCalendar.ics', function (err) {
-            if (err) console.log('ERROR: ' + err);
-        });
+        //fs.rename('./newCalendar.ics', './oldCalendar.ics', function (err) {
+        //    if (err) console.log('ERROR: ' + err);
+        //});
         console.log('\nFinished adding/updating tasks!');
     } catch (error) {
         console.log('ERROR: ' + error);
@@ -78,13 +78,13 @@ async function checkIcalObjectEqual(icalEvent1, icalEvent2) {
 /**
  * Returns the time of the event of Barcelona time (UTC+1) in ISO8601 format
  */
-async function convertUTCtoBarcelonaTime(icalEvent) {
+async function convertUTCtoBarcelonaTime(icalEventDate) {
     //Add one hour to the UTC time
-    let hourToChange = icalEvent.start.getHours();
+    let hourToChange = icalEventDate.getHours();
     hourToChange += 1;
-    icalEvent.start.setHours(hourToChange);
+    icalEventDate.setHours(hourToChange);
     //Change date ISO format to show it's (UTC+1) time
-    let stringWithISOtime = icalEvent.start.toISOString().slice(0, -1);
+    let stringWithISOtime = icalEventDate.toISOString().slice(0, -1);
     stringWithISOtime = stringWithISOtime + '+01:00';
     return stringWithISOtime;
 }
@@ -94,7 +94,13 @@ async function convertUTCtoBarcelonaTime(icalEvent) {
  */
 async function createNotionEvent(icalEvent) {
     try {
-        const barcelonaTime = await convertUTCtoBarcelonaTime(icalEvent);
+        const startTimeBarcelona = await convertUTCtoBarcelonaTime(icalEvent.start);
+        let endTimeBarcelona = await convertUTCtoBarcelonaTime(icalEvent.end);
+
+        if (startTimeBarcelona == endTimeBarcelona) {
+            endTimeBarcelona = null;
+        }
+
         const response = await notion.pages.create({
             parent: {
                 database_id: databaseId
@@ -115,7 +121,8 @@ async function createNotionEvent(icalEvent) {
                 },
                 Date: {
                     date: {
-                        start: barcelonaTime
+                        start: startTimeBarcelona,
+                        end: endTimeBarcelona
                     }
                 },
                 Id: {
@@ -148,7 +155,6 @@ async function queryDatabaseNotion(icalEvent) {
                 }
             }
         });
-        console.log(response.results[0].properties);
         return response.results[0].id;
     } catch (error) {
         console.log('ERROR: ' + error);
