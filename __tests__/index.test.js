@@ -16,13 +16,15 @@
 const fs = require('fs');
 const { Client } = require('@notionhq/client');
 const ical = require('ical');
+const download = require('download');
 const {
     addOrUpdateNotionCalendar,
     checkIcalObjectEqual,
     convertUTCtoBarcelonaTime,
     queryDatabaseNotion,
     updateDatabaseNotion,
-    createNotionEvent
+    createNotionEvent,
+    getNewIcal
 } = require('../functions.js');
 const exp = require('constants');
 
@@ -30,95 +32,66 @@ require('dotenv').config();
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 //To mock all the calls to the Notion API
-jest.mock('@notionhq/client');
+//jest.mock('@notionhq/client');
+jest.mock('download');
 
-//NO CREO QUE HACE FALTA
-// beforeAll(() => {
-//     //If there is an existing current oldCalendar, change the name to not affect the testing
-//     if (fs.existsSync('./oldCalendar.ics'))
-//         fs.rename('./oldCalendar.ics', './oldCalendar-real.ics', function (err) {
-//             if (err) console.log('ERROR: ' + err);
-//         });
-// });
 
-// beforeEach(() => {
-//     fs.writeFileSync('./oldCalendar.ics', '');
-// });
-
-// //NO CREO QUE HACE FALTA
-// afterAll(() => {
-//     //If there was an existing oldCalendar before testing, revert the testing changes
-//     if (fs.existsSync('./oldCalendar-real.ics'))
-//         fs.rename('./oldCalendar-real.ics', './oldCalendar.ics', function (err) {
-//             if (err) console.log('ERROR: ' + err);
-//         });
-// });
-
-//test('creating a new succesful event', () => {});
-
-// TESTS checkIcalObjectEqual
-test('Check if iCal events are equal: different title', async () => {
-    const newIcal = ical.parseFile('./__tests__/newCalendarUpdateTitle.ics');
-    const oldIcal = ical.parseFile('./__tests__/oldCalendarUpdateTitle.ics');
-    const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(oldIcal)[0]);
-    expect(isEqual).toBe(false);
+describe('Tests checkIcalObjectEqual', () => {
+    test('Check if iCal events are equal: different title', async () => {
+        const newIcal = ical.parseFile('./__tests__/newCalendarUpdateTitle.ics');
+        const oldIcal = ical.parseFile('./__tests__/oldCalendarUpdateTitle.ics');
+        const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(oldIcal)[0]);
+        expect(isEqual).toBe(false);
+    });
+    
+    test('Check if iCal events are equal: different date', async () => {
+        const newIcal = ical.parseFile('./__tests__/newCalendarUpdateDate.ics');
+        const oldIcal = ical.parseFile('./__tests__/oldCalendarUpdateDate.ics');
+        const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(oldIcal)[0]);
+        expect(isEqual).toBe(false);
+    });
+    
+    test('Check if iCal events are equal: equal events', async () => {
+        const newIcal = ical.parseFile('./__tests__/randomCalendar.ics');
+        const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(newIcal)[0]);
+        expect(isEqual).toBe(true);
+    });
 });
 
-test('Check if iCal events are equal: different date', async () => {
-    const newIcal = ical.parseFile('./__tests__/newCalendarUpdateDate.ics');
-    const oldIcal = ical.parseFile('./__tests__/oldCalendarUpdateDate.ics');
-    const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(oldIcal)[0]);
-    expect(isEqual).toBe(false);
+
+describe('Tests convertUTCtoBarcelonaTime', () => {
+    test('Translate UTC to UTC+1', async () => {
+        const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
+        const timeConverted = await convertUTCtoBarcelonaTime(Object.values(calendar)[0].start);
+        expect(timeConverted).toBe('2012-11-07T23:59:00.000+01:00');
+    });
 });
 
-test('Check if iCal events are equal: equal events', async () => {
-    const newIcal = ical.parseFile('./__tests__/randomCalendar.ics');
-    const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(newIcal)[0]);
-    expect(isEqual).toBe(true);
+
+describe('Tests getNewIcal', () => {
+    test('Download new iCal', async () => {
+        download.mockImplementation( () => {
+            fs.writeFileSync('./__tests__/getNewCalendar.ics', '');
+        });
+        await getNewIcal();
+        expect(download).toHaveBeenCalledTimes(1);
+        fs.unlinkSync('./__tests__/getNewCalendar.ics');
+    });
 });
 
-// TESTS convertUTCtoBarcelonaTime
-test('Translate UTC to UTC+1', async () => {
-    const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
-    const timeConverted = await convertUTCtoBarcelonaTime(Object.values(calendar)[0].start);
-    expect(timeConverted).toBe('2019-11-07T23:59:00.000+01:00');
+
+describe('Tests createNotionEvent', () => {
+    test('Create Notion Event with end time', async () => {
+        const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
+        const mock = jest.fn();
+        notion.pages.create = mock;
+        await createNotionEvent(Object.values(calendar)[0]);
+        expect(notion.pages.create).toHaveBeenCalled();
+
+    });
+
+    test('Create Notion Event without end time', async () => {
+
+    });
 });
 
-//TESTS createNotionEvent
-/**
-test('create Notion event: sucess', async () => {
-    const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
-    const data = {
-        object: 'page',
-        id: '251d2b5f-268c-4de2-afe9-c71ff92ca95c',
-        created_time: '2020-03-17T19:10:04.968Z',
-        last_edited_time: '2020-03-17T21:49:37.913Z',
-        parent: {
-            type: 'database_id',
-            database_id: '48f8fee9-cd79-4180-bc2f-ec0398253067'
-        },
-        icon: {
-            type: 'emoji',
-            emoji: '🎉'
-        },
-        cover: {
-            type: 'external',
-            external: {
-                url: 'https://website.domain/images/image.png'
-            }
-        },
-        archived: false,
-        url: 'https://www.notion.so/Tuscan-Kale-251d2b5f268c4de2afe9c71ff92ca95c',
-        properties: {
-            Recipes: {
-                id: 'Ai`L',
-                type: 'relation',
-                relation: []
-            }
-        }
-    };
-    const response = notion.pages.create.mockResolvedValues(data);
-    await createNotionEvent(Object.values(calendar)[0]);
-    expect(response).toHaveBeenCalled();
-});
-*/

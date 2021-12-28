@@ -9,7 +9,7 @@ require('dotenv').config();
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 const databaseId = process.env.NOTION_DATABASE_ID;
-module.exports = { addOrUpdateNotionCalendar, checkIcalObjectEqual, getNewIcal, convertUTCtoBarcelonaTime };
+module.exports = { addOrUpdateNotionCalendar,checkIcalObjectEqual, getNewIcal, convertUTCtoBarcelonaTime, createNotionEvent, updateDatabaseNotion };
 
 /**
  * Downloads the new calendar from the Raco
@@ -136,6 +136,7 @@ async function createNotionEvent(icalEvent) {
                 }
             }
         });
+        console.log(response);
     } catch (error) {
         console.log('ERROR: ' + error);
     }
