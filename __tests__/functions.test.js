@@ -1,20 +1,4 @@
-/**
- * Tests I want to run:
- *
- * 1. Creating a new event
- *      1.1 Succesful creation
- * 2. Updating an existing event
- *      2.1 Succesful update of title change
- *      2.2 Succesful update of date change
- * 3. Event already exists
- *
- * To simulate this, I really only have to test if it finds it as a new item or not
- * How do I simulate the oldCalendar.ics and the newCalendar.ics?
- * I also will have to maybe mock the API function calls like updateDatabaseNotino and createNotionEvent
- */
-
 const fs = require('fs');
-const { Client } = require('@notionhq/client');
 const ical = require('ical');
 const download = require('download');
 const {
@@ -29,27 +13,28 @@ const {
     createNotionEvent
 } = require('../notionApiCalls.js');
 
-const exp = require('constants');
-
 require('dotenv').config();
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
-//To mock all the calls to the Notion API
-jest.mock('@notionhq/client');
+//To mock the API calls
 jest.mock('download');
 jest.mock('../notionApiCalls.js');
 
+beforeEach(() => {
+    jest.clearAllMocks();
+});
 
 beforeAll(() => {
-    fs.rename('./oldCalendar.ics', './oldCalendarReal.ics', function (err) {
+    if (fs.existsSync('./oldCalendar.ics'))
+        fs.rename('./oldCalendar.ics', './oldCalendarReal.ics', function (err) {
            if (err) console.log('ERROR: ' + err);
-    });
+        });
 });
 
 afterAll(() => {
-    fs.rename('./oldCalendarReal.ics', './oldCalendar.ics', function (err) {
-        if (err) console.log('ERROR: ' + err);
- });
+    if (fs.existsSync('./oldCalendarReal.ics'))
+        fs.rename('./oldCalendarReal.ics', './oldCalendar.ics', function (err) {
+            if (err) console.log('ERROR: ' + err);
+        });
 })
 
 
@@ -91,13 +76,12 @@ describe('Tests getNewIcal', () => {
             fs.writeFileSync('./__tests__/getNewCalendar.ics', '');
         });
         await getNewIcal();
-        expect(download).toHaveBeenCalledTimes(1);
         fs.unlinkSync('./__tests__/getNewCalendar.ics',  function (err) {
             if (err) console.log('ERROR: ' + err);
         }); 
+        expect(download).toHaveBeenCalledTimes(1);
     });
 });
-
 
 
 describe('Test addOrUpdateNotionCalendar', () => {
@@ -118,6 +102,7 @@ describe('Test addOrUpdateNotionCalendar', () => {
     });
 
     test('Creating a new event', async () => {
+        const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
         fs.copyFileSync('./__tests__/randomCalendar.ics', './newCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
         });
@@ -125,22 +110,28 @@ describe('Test addOrUpdateNotionCalendar', () => {
         fs.unlinkSync('./oldCalendar.ics',  function (err) {
             if (err) console.log('ERROR: ' + err);
         }); 
-        expect(createNotionEvent).toHaveBeenCalled();
+        expect(createNotionEvent).toHaveBeenCalledTimes(1);
+        expect(createNotionEvent).toBeCalledWith(Object.values(calendar)[0]);
     });
 
     test('Updating an existing event', async () => {
+        const calendar = ical.parseFile('./__tests__/newCalendarUpdateDate.ics');
         fs.copyFileSync('./__tests__/newCalendarUpdateDate.ics', './newCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
         });
         fs.copyFileSync('./__tests__/oldCalendarUpdateDate.ics', './oldCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
         });
+        queryDatabaseNotion.mockReturnValue('fn2323id23');
         await addOrUpdateNotionCalendar();
         fs.unlinkSync('./oldCalendar.ics',  function (err) {
             if (err) console.log('ERROR: ' + err);
         }); 
-        expect(queryDatabaseNotion).toHaveBeenCalled();
-        expect(updateDatabaseNotion).toHaveBeenCalled();
+        expect(queryDatabaseNotion).toHaveBeenCalledTimes(1);
+        expect(queryDatabaseNotion).toBeCalledWith(Object.values(calendar)[0]);
+        expect(updateDatabaseNotion).toHaveBeenCalledTimes(1);
+        expect(updateDatabaseNotion).toBeCalledWith(Object.values(calendar)[0],'fn2323id23');
+
     });
 });
 
