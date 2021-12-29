@@ -42,8 +42,12 @@ You can find out how to find your Notion database ID [here](https://stackoverflo
 
 For this program to work correctly in your Notion Database, there are 2 properties that **MUST EXIST WITH THE SAME NAME AND FORMAT** ⚠️
 
--   Date: Property type: Date and Name of the property: `Date`
--   Id: Property type: Text and Name of the property: `Id`
+-   Date:
+    -  Property type: Date
+    -  Name of the property: `Date`
+-   Id:
+    -   Property type: Text
+    -   Name of the property: `Id`
 
 Like this:
 
