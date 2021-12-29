@@ -21,19 +21,36 @@ const {
     addOrUpdateNotionCalendar,
     checkIcalObjectEqual,
     convertUTCtoBarcelonaTime,
-    queryDatabaseNotion,
-    updateDatabaseNotion,
-    createNotionEvent,
     getNewIcal
 } = require('../functions.js');
+const {
+    queryDatabaseNotion,
+    updateDatabaseNotion,
+    createNotionEvent
+} = require('../notionApiCalls.js');
+
 const exp = require('constants');
 
 require('dotenv').config();
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 //To mock all the calls to the Notion API
-//jest.mock('@notionhq/client');
+jest.mock('@notionhq/client');
 jest.mock('download');
+jest.mock('../notionApiCalls.js');
+
+
+beforeAll(() => {
+    fs.rename('./oldCalendar.ics', './oldCalendarReal.ics', function (err) {
+           if (err) console.log('ERROR: ' + err);
+    });
+});
+
+afterAll(() => {
+    fs.rename('./oldCalendarReal.ics', './oldCalendar.ics', function (err) {
+        if (err) console.log('ERROR: ' + err);
+ });
+})
 
 
 describe('Tests checkIcalObjectEqual', () => {
@@ -75,23 +92,55 @@ describe('Tests getNewIcal', () => {
         });
         await getNewIcal();
         expect(download).toHaveBeenCalledTimes(1);
-        fs.unlinkSync('./__tests__/getNewCalendar.ics');
+        fs.unlinkSync('./__tests__/getNewCalendar.ics',  function (err) {
+            if (err) console.log('ERROR: ' + err);
+        }); 
     });
 });
 
 
-describe('Tests createNotionEvent', () => {
-    test('Create Notion Event with end time', async () => {
-        const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
-        const mock = jest.fn();
-        notion.pages.create = mock;
-        await createNotionEvent(Object.values(calendar)[0]);
-        expect(notion.pages.create).toHaveBeenCalled();
 
+describe('Test addOrUpdateNotionCalendar', () => {
+    test('Both calendars are the same, no creating or updating', async () => {
+        fs.copyFileSync('./__tests__/randomCalendar.ics', './newCalendar.ics', function (err) {
+            if (err) console.log('ERROR: ' + err);
+        });
+        fs.copyFileSync('./__tests__/randomCalendar.ics', './oldCalendar.ics', function (err) {
+            if (err) console.log('ERROR: ' + err);
+        });
+        await addOrUpdateNotionCalendar();
+        fs.unlinkSync('./oldCalendar.ics',  function (err) {
+            if (err) console.log('ERROR: ' + err);
+        }); 
+        expect(queryDatabaseNotion).not.toHaveBeenCalled();
+        expect(updateDatabaseNotion).not.toHaveBeenCalled();
+        expect(createNotionEvent).not.toHaveBeenCalled();
     });
 
-    test('Create Notion Event without end time', async () => {
+    test('Creating a new event', async () => {
+        fs.copyFileSync('./__tests__/randomCalendar.ics', './newCalendar.ics', function (err) {
+            if (err) console.log('ERROR: ' + err);
+        });
+        await addOrUpdateNotionCalendar();
+        fs.unlinkSync('./oldCalendar.ics',  function (err) {
+            if (err) console.log('ERROR: ' + err);
+        }); 
+        expect(createNotionEvent).toHaveBeenCalled();
+    });
 
+    test('Updating an existing event', async () => {
+        fs.copyFileSync('./__tests__/newCalendarUpdateDate.ics', './newCalendar.ics', function (err) {
+            if (err) console.log('ERROR: ' + err);
+        });
+        fs.copyFileSync('./__tests__/oldCalendarUpdateDate.ics', './oldCalendar.ics', function (err) {
+            if (err) console.log('ERROR: ' + err);
+        });
+        await addOrUpdateNotionCalendar();
+        fs.unlinkSync('./oldCalendar.ics',  function (err) {
+            if (err) console.log('ERROR: ' + err);
+        }); 
+        expect(queryDatabaseNotion).toHaveBeenCalled();
+        expect(updateDatabaseNotion).toHaveBeenCalled();
     });
 });
 

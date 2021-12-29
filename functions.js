@@ -1,15 +1,16 @@
 const ical = require('ical');
 const fs = require('fs');
 const download = require('download');
-const { Client } = require('@notionhq/client');
-const { resolve } = require('path');
-const { type } = require('os');
+module.exports = { addOrUpdateNotionCalendar,checkIcalObjectEqual, getNewIcal, convertUTCtoBarcelonaTime };
+
+const {
+    createNotionEvent,
+    updateDatabaseNotion,
+    queryDatabaseNotion
+} = require('./notionApiCalls');
 
 require('dotenv').config();
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
-const databaseId = process.env.NOTION_DATABASE_ID;
-module.exports = { addOrUpdateNotionCalendar,checkIcalObjectEqual, getNewIcal, convertUTCtoBarcelonaTime, createNotionEvent, updateDatabaseNotion };
 
 /**
  * Downloads the new calendar from the Raco
@@ -55,9 +56,9 @@ async function addOrUpdateNotionCalendar() {
         else console.log('\nA total of ' + counterEventsAdded + ' events were created/updated.');
 
         // Replace the old Calendar with the new one, so when the program is executed again the old version is updated.
-        //fs.rename('./newCalendar.ics', './oldCalendar.ics', function (err) {
-        //    if (err) console.log('ERROR: ' + err);
-        //});
+        fs.rename('./newCalendar.ics', './oldCalendar.ics', function (err) {
+            if (err) console.log('ERROR: ' + err);
+        });
         console.log('\nFinished adding/updating tasks!');
     } catch (error) {
         console.log('ERROR: ' + error);
@@ -87,109 +88,6 @@ async function convertUTCtoBarcelonaTime(icalEventDate) {
     let stringWithISOtime = icalEventDate.toISOString().slice(0, -1);
     stringWithISOtime = stringWithISOtime + '+01:00';
     return stringWithISOtime;
-}
-
-/**
- * Add a calendar event (icalEvent) to the Notion database (databaseId).
- */
-async function createNotionEvent(icalEvent) {
-    try {
-        const startTimeBarcelona = await convertUTCtoBarcelonaTime(icalEvent.start);
-        let endTimeBarcelona = await convertUTCtoBarcelonaTime(icalEvent.end);
-
-        if (startTimeBarcelona == endTimeBarcelona) {
-            endTimeBarcelona = null;
-        }
-
-        const response = await notion.pages.create({
-            parent: {
-                database_id: databaseId
-            },
-            icon: {
-                type: 'emoji',
-                emoji: '🗒️'
-            },
-            properties: {
-                title: {
-                    title: [
-                        {
-                            text: {
-                                content: icalEvent.summary
-                            }
-                        }
-                    ]
-                },
-                Date: {
-                    date: {
-                        start: startTimeBarcelona,
-                        end: endTimeBarcelona
-                    }
-                },
-                Id: {
-                    rich_text: [
-                        {
-                            text: {
-                                content: icalEvent.uid
-                            }
-                        }
-                    ]
-                }
-            }
-        });
-        console.log(response);
-    } catch (error) {
-        console.log('ERROR: ' + error);
-    }
-}
-
-/**
- * Returns Notion id page from databaseId to be modified
- */
-async function queryDatabaseNotion(icalEvent) {
-    try {
-        const response = await notion.databases.query({
-            database_id: databaseId,
-            filter: {
-                property: 'Id',
-                rich_text: {
-                    equals: icalEvent.uid
-                }
-            }
-        });
-        return response.results[0].id;
-    } catch (error) {
-        console.log('ERROR: ' + error);
-    }
-}
-
-/**
- * Updates a Notion page (notionPageId) with the icalEvent data
- */
-async function updateDatabaseNotion(icalEvent, notionPageId) {
-    try {
-        const barcelonaTime = await convertUTCtoBarcelonaTime(icalEvent);
-        const response = await notion.pages.update({
-            page_id: notionPageId,
-            properties: {
-                title: {
-                    title: [
-                        {
-                            text: {
-                                content: icalEvent.summary
-                            }
-                        }
-                    ]
-                },
-                Date: {
-                    date: {
-                        start: barcelonaTime
-                    }
-                }
-            }
-        });
-    } catch (error) {
-        console.log('ERROR: ' + error);
-    }
 }
 
 //npm run start  0,86s user 0,17s system 25% cpu 4,089 total
