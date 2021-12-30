@@ -79,3 +79,4 @@ After using Notion for my university studies for a few months, I saw myself pain
 -   Node.js project development (as it's the first time using node, I learned about npm and how dependencies work).
 -   How to use eslint and prettierrc.
 -   How and why to use `dotenv`.
+-   Improved my testing skills.
