@@ -1,7 +1,7 @@
 const ical = require('ical');
 const fs = require('fs');
 const download = require('download');
-module.exports = { addOrUpdateNotionCalendar,checkIcalObjectEqual, getNewIcal, convertUTCtoBarcelonaTime };
+module.exports = { addOrUpdateNotionCalendar,checkIcalObjectEqual, getNewIcal, convertUTCtoBarcelonaTime,getStartAndEndDate };
 
 const {
     createNotionEvent,
@@ -21,7 +21,7 @@ async function getNewIcal() {
         await download(file, '.', { filename: 'newCalendar.ics' });
         console.log('Downloaded new Ical...\n');
     } catch (error) {
-        console.log('ERROR in getNewIcal: ' + error);
+        throw new Error(`[functions.getNewIcal] ${error.message}`)
     }
 }
 
@@ -40,7 +40,8 @@ async function addOrUpdateNotionCalendar() {
             if (!(id in oldIcal)) {
                 ++counterEventsAdded;
                 console.log('New event was found: ' + newIcal[id].summary);
-                createNotionEvent(newIcal[id]);
+                const dates = await getStartAndEndDate(newIcal[id]);
+                const response = createNotionEvent(newIcal[id], dates[0], dates[1]);
                 // NO AWAIT FOR EXPLOIT CONCURRENCY
             }
             // If the event represented in the id exists in the old calendar and its modified
@@ -48,7 +49,8 @@ async function addOrUpdateNotionCalendar() {
                 ++counterEventsAdded;
                 console.log(newIcal[id].summary + ' event was found (to update)...');
                 const notionPageId = await queryDatabaseNotion(newIcal[id]);
-                updateDatabaseNotion(newIcal[id], notionPageId);
+                const dates = await getStartAndEndDate(newIcal[id]);
+                const response = updateDatabaseNotion(newIcal[id], notionPageId, dates[0], dates[1]);
                 // NO AWAIT FOR EXPLOIT CONCURRENCY
             }
         }
@@ -61,7 +63,7 @@ async function addOrUpdateNotionCalendar() {
         });
         console.log('\nFinished adding/updating tasks!');
     } catch (error) {
-        console.log('ERROR: ' + error);
+        throw new Error(`[functions.addOrUpdateNotionCalendar] ${error.message}`)
     }
 }
 
@@ -80,14 +82,34 @@ async function checkIcalObjectEqual(icalEvent1, icalEvent2) {
  * Returns the time of the event of Barcelona time (UTC+1) in ISO8601 format
  */
 async function convertUTCtoBarcelonaTime(icalEventDate) {
-    //Add one hour to the UTC time
-    let hourToChange = icalEventDate.getHours();
-    hourToChange += 1;
-    icalEventDate.setHours(hourToChange);
-    //Change date ISO format to show it's (UTC+1) time
-    let stringWithISOtime = icalEventDate.toISOString().slice(0, -1);
-    stringWithISOtime = stringWithISOtime + '+01:00';
-    return stringWithISOtime;
+    try {
+        //Add one hour to the UTC time
+        let result = new Date(icalEventDate);
+        let hourToChange = result.getHours();
+        hourToChange += 1;
+        result.setHours(hourToChange);
+        //Change date ISO format to show it's (UTC+1) time
+        let stringWithISOtime = result.toISOString().slice(0, -1);
+        stringWithISOtime = stringWithISOtime + '+01:00';
+        return stringWithISOtime;
+    }
+    catch(error) {
+        throw new Error(`[functions.convertUTCtoBarcelonaTime] ${error.message}`)
+    }
+}
+
+/**
+ * Get the start and end date of a calendar event
+ */
+ async function getStartAndEndDate(icalEvent) {
+    const startTimeBarcelona = await convertUTCtoBarcelonaTime(icalEvent.start);
+    let endTimeBarcelona = await convertUTCtoBarcelonaTime(icalEvent.end);
+
+    if (startTimeBarcelona == endTimeBarcelona) {
+            endTimeBarcelona = null;
+    }
+
+    return [startTimeBarcelona, endTimeBarcelona];
 }
 
 //npm run start  0,86s user 0,17s system 25% cpu 4,089 total

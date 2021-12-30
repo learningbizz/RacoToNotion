@@ -7,19 +7,11 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 const databaseId = process.env.NOTION_DATABASE_ID;
 module.exports = {createNotionEvent, updateDatabaseNotion, queryDatabaseNotion};
 
-
 /**
  * Add a calendar event (icalEvent) to the Notion database (databaseId).
  */
- async function createNotionEvent(icalEvent) {
+ async function createNotionEvent(icalEvent, startTimeBarcelona, endTimeBarcelona) {
     try {
-        const startTimeBarcelona = await functions.convertUTCtoBarcelonaTime(icalEvent.start);
-        let endTimeBarcelona = await functions.convertUTCtoBarcelonaTime(icalEvent.end);
-
-        if (startTimeBarcelona == endTimeBarcelona) {
-            endTimeBarcelona = null;
-        }
-
         const response = await notion.pages.create({
             parent: {
                 database_id: databaseId
@@ -55,8 +47,9 @@ module.exports = {createNotionEvent, updateDatabaseNotion, queryDatabaseNotion};
                 }
             }
         });
+        return response;
     } catch (error) {
-        console.log('ERROR: ' + error);
+        throw new Error(`[notionApiCalls.createNotionEvent] ${error.message}`);
     }
 }
 
@@ -76,16 +69,15 @@ async function queryDatabaseNotion(icalEvent) {
         });
         return response.results[0].id;
     } catch (error) {
-        console.log('ERROR: ' + error);
+        throw new Error(`[notionApiCalls.queryDatabaseNotion] ${error.message}`);
     }
 }
 
 /**
  * Updates a Notion page (notionPageId) with the icalEvent data
  */
- async function updateDatabaseNotion(icalEvent, notionPageId) {
+ async function updateDatabaseNotion(icalEvent, notionPageId, startTimeBarcelona, endTimeBarcelona) {
     try {
-        const barcelonaTime = await functions.convertUTCtoBarcelonaTime(icalEvent);
         const response = await notion.pages.update({
             page_id: notionPageId,
             properties: {
@@ -100,12 +92,14 @@ async function queryDatabaseNotion(icalEvent) {
                 },
                 Date: {
                     date: {
-                        start: barcelonaTime
+                        start: startTimeBarcelona,
+                        end: endTimeBarcelona
                     }
                 }
             }
         });
+        return response;
     } catch (error) {
-        console.log('ERROR: ' + error);
+        throw new Error(`[notionApiCalls.updateDatabaseNotion] ${error.message}`);
     }
 }
