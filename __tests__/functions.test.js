@@ -5,7 +5,8 @@ const {
     addOrUpdateNotionCalendar,
     checkIcalObjectEqual,
     convertUTCtoBarcelonaTime,
-    getNewIcal
+    getNewIcal,
+    getStartAndEndDate
 } = require('../functions.js');
 const {
     queryDatabaseNotion,
@@ -83,6 +84,25 @@ describe('Tests getNewIcal', () => {
     });
 });
 
+describe('Tests getStartAndEndDate', () => {
+    test('Calendar without end date', async () => {
+        const calendar = ical.parseFile('./__tests__/calendarWithoutEndDate.ics');
+        const dates = await getStartAndEndDate(Object.values(calendar)[0]);
+        expect(dates[0]).toBe('2012-11-07T23:59:00.000+01:00');
+        expect(dates[1]).toBe(null);
+
+    });
+
+    test('Calendar with end date', async () => {
+        const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
+        const dates = await getStartAndEndDate(Object.values(calendar)[0]);
+        expect(dates[0]).toBe('2012-11-07T23:59:00.000+01:00');
+        expect(dates[1]).toBe('2017-11-07T23:59:00.000+01:00');
+    });
+    
+});
+
+
 
 describe('Test addOrUpdateNotionCalendar', () => {
     test('Both calendars are the same, no creating or updating', async () => {
@@ -111,7 +131,9 @@ describe('Test addOrUpdateNotionCalendar', () => {
             if (err) console.log('ERROR: ' + err);
         }); 
         expect(createNotionEvent).toHaveBeenCalledTimes(1);
-        expect(createNotionEvent).toBeCalledWith(Object.values(calendar)[0]);
+        expect(createNotionEvent).toBeCalledWith(Object.values(calendar)[0],
+                                                '2012-11-07T23:59:00.000+01:00',
+                                                '2017-11-07T23:59:00.000+01:00');
     });
 
     test('Updating an existing event', async () => {
@@ -130,8 +152,10 @@ describe('Test addOrUpdateNotionCalendar', () => {
         expect(queryDatabaseNotion).toHaveBeenCalledTimes(1);
         expect(queryDatabaseNotion).toBeCalledWith(Object.values(calendar)[0]);
         expect(updateDatabaseNotion).toHaveBeenCalledTimes(1);
-        expect(updateDatabaseNotion).toBeCalledWith(Object.values(calendar)[0],'fn2323id23');
-
+        expect(updateDatabaseNotion).toBeCalledWith(Object.values(calendar)[0],
+                                                    'fn2323id23',
+                                                    '2019-11-07T23:59:00.000+01:00',
+                                                    '2017-11-07T23:59:00.000+01:00');
     });
 });
 
