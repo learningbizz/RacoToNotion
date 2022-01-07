@@ -95,12 +95,8 @@ describe('Tests getStartAndEndDate', () => {
 
 describe('Test addOrUpdateNotionCalendar', () => {
     test('Both calendars are the same, no creating or updating', async () => {
-        fs.copyFileSync('./__tests__/randomCalendar.ics', './newCalendar.ics', function (err) {
-            if (err) console.log('ERROR: ' + err);
-        });
-        fs.copyFileSync('./__tests__/randomCalendar.ics', './oldCalendar.ics', function (err) {
-            if (err) console.log('ERROR: ' + err);
-        });
+        fs.copyFileSync('./__tests__/randomCalendar.ics', './newCalendar.ics');
+        fs.copyFileSync('./__tests__/randomCalendar.ics', './oldCalendar.ics');
         await addOrUpdateNotionCalendar();
         fs.unlinkSync('./oldCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
@@ -112,9 +108,7 @@ describe('Test addOrUpdateNotionCalendar', () => {
 
     test('Creating a new event', async () => {
         const calendar = ical.parseFile('./__tests__/randomCalendar.ics');
-        fs.copyFileSync('./__tests__/randomCalendar.ics', './newCalendar.ics', function (err) {
-            if (err) console.log('ERROR: ' + err);
-        });
+        fs.copyFileSync('./__tests__/randomCalendar.ics', './newCalendar.ics');
         await addOrUpdateNotionCalendar();
         fs.unlinkSync('./oldCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
@@ -129,12 +123,8 @@ describe('Test addOrUpdateNotionCalendar', () => {
 
     test('Updating an existing event', async () => {
         const calendar = ical.parseFile('./__tests__/newCalendarUpdateDate.ics');
-        fs.copyFileSync('./__tests__/newCalendarUpdateDate.ics', './newCalendar.ics', function (err) {
-            if (err) console.log('ERROR: ' + err);
-        });
-        fs.copyFileSync('./__tests__/oldCalendarUpdateDate.ics', './oldCalendar.ics', function (err) {
-            if (err) console.log('ERROR: ' + err);
-        });
+        fs.copyFileSync('./__tests__/newCalendarUpdateDate.ics', './newCalendar.ics');
+        fs.copyFileSync('./__tests__/oldCalendarUpdateDate.ics', './oldCalendar.ics');
         queryDatabaseNotion.mockReturnValue('fn2323id23');
         await addOrUpdateNotionCalendar();
         fs.unlinkSync('./oldCalendar.ics', function (err) {
