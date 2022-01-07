@@ -84,11 +84,10 @@ async function checkIcalObjectEqual(icalEvent1, icalEvent2) {
  */
 async function convertUTCtoBarcelonaTime(icalEventDate) {
     try {
-        //Add one hour to the UTC time
         let result = new Date(icalEventDate);
+        //Change the date to ISO string without changing the current timezone (toISOString removes the timezone for some reason)
         var dateConvertedToBarcelonaTime =
             new Date(result.getTime() - result.getTimezoneOffset() * 60000).toISOString().slice(0, -1) + '+01:00';
-        //Change date ISO format to show it's (UTC+1) time
         return dateConvertedToBarcelonaTime;
     } catch (error) {
         throw new Error(`[functions.convertUTCtoBarcelonaTime] ${error.message}`);
