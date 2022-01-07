@@ -86,13 +86,10 @@ async function convertUTCtoBarcelonaTime(icalEventDate) {
     try {
         //Add one hour to the UTC time
         let result = new Date(icalEventDate);
-        let hourToChange = result.getHours();
-        hourToChange += 1;
-        result.setHours(hourToChange);
+        var dateConvertedToBarcelonaTime =
+            new Date(result.getTime() - result.getTimezoneOffset() * 60000).toISOString().slice(0, -1) + '+01:00';
         //Change date ISO format to show it's (UTC+1) time
-        let stringWithISOtime = result.toISOString().slice(0, -1);
-        stringWithISOtime = stringWithISOtime + '+01:00';
-        return stringWithISOtime;
+        return dateConvertedToBarcelonaTime;
     } catch (error) {
         throw new Error(`[functions.convertUTCtoBarcelonaTime] ${error.message}`);
     }
