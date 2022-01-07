@@ -8,11 +8,7 @@ const {
     getNewIcal,
     getStartAndEndDate
 } = require('../functions.js');
-const {
-    queryDatabaseNotion,
-    updateDatabaseNotion,
-    createNotionEvent
-} = require('../notionApiCalls.js');
+const { queryDatabaseNotion, updateDatabaseNotion, createNotionEvent } = require('../notionApiCalls.js');
 
 require('dotenv').config();
 
@@ -27,7 +23,7 @@ beforeEach(() => {
 beforeAll(() => {
     if (fs.existsSync('./oldCalendar.ics'))
         fs.rename('./oldCalendar.ics', './oldCalendarReal.ics', function (err) {
-           if (err) console.log('ERROR: ' + err);
+            if (err) console.log('ERROR: ' + err);
         });
 });
 
@@ -36,8 +32,7 @@ afterAll(() => {
         fs.rename('./oldCalendarReal.ics', './oldCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
         });
-})
-
+});
 
 describe('Tests checkIcalObjectEqual', () => {
     test('Check if iCal events are equal: different title', async () => {
@@ -46,21 +41,20 @@ describe('Tests checkIcalObjectEqual', () => {
         const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(oldIcal)[0]);
         expect(isEqual).toBe(false);
     });
-    
+
     test('Check if iCal events are equal: different date', async () => {
         const newIcal = ical.parseFile('./__tests__/newCalendarUpdateDate.ics');
         const oldIcal = ical.parseFile('./__tests__/oldCalendarUpdateDate.ics');
         const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(oldIcal)[0]);
         expect(isEqual).toBe(false);
     });
-    
+
     test('Check if iCal events are equal: equal events', async () => {
         const newIcal = ical.parseFile('./__tests__/randomCalendar.ics');
         const isEqual = await checkIcalObjectEqual(Object.values(newIcal)[0], Object.values(newIcal)[0]);
         expect(isEqual).toBe(true);
     });
 });
-
 
 describe('Tests convertUTCtoBarcelonaTime', () => {
     test('Translate UTC to UTC+1', async () => {
@@ -70,16 +64,15 @@ describe('Tests convertUTCtoBarcelonaTime', () => {
     });
 });
 
-
 describe('Tests getNewIcal', () => {
     test('Download new iCal', async () => {
-        download.mockImplementation( () => {
+        download.mockImplementation(() => {
             fs.writeFileSync('./__tests__/getNewCalendar.ics', '');
         });
         await getNewIcal();
-        fs.unlinkSync('./__tests__/getNewCalendar.ics',  function (err) {
+        fs.unlinkSync('./__tests__/getNewCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
-        }); 
+        });
         expect(download).toHaveBeenCalledTimes(1);
     });
 });
@@ -90,7 +83,6 @@ describe('Tests getStartAndEndDate', () => {
         const dates = await getStartAndEndDate(Object.values(calendar)[0]);
         expect(dates[0]).toBe('2012-11-07T23:59:00.000+01:00');
         expect(dates[1]).toBe(null);
-
     });
 
     test('Calendar with end date', async () => {
@@ -99,10 +91,7 @@ describe('Tests getStartAndEndDate', () => {
         expect(dates[0]).toBe('2012-11-07T23:59:00.000+01:00');
         expect(dates[1]).toBe('2017-11-07T23:59:00.000+01:00');
     });
-    
 });
-
-
 
 describe('Test addOrUpdateNotionCalendar', () => {
     test('Both calendars are the same, no creating or updating', async () => {
@@ -113,9 +102,9 @@ describe('Test addOrUpdateNotionCalendar', () => {
             if (err) console.log('ERROR: ' + err);
         });
         await addOrUpdateNotionCalendar();
-        fs.unlinkSync('./oldCalendar.ics',  function (err) {
+        fs.unlinkSync('./oldCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
-        }); 
+        });
         expect(queryDatabaseNotion).not.toHaveBeenCalled();
         expect(updateDatabaseNotion).not.toHaveBeenCalled();
         expect(createNotionEvent).not.toHaveBeenCalled();
@@ -127,13 +116,15 @@ describe('Test addOrUpdateNotionCalendar', () => {
             if (err) console.log('ERROR: ' + err);
         });
         await addOrUpdateNotionCalendar();
-        fs.unlinkSync('./oldCalendar.ics',  function (err) {
+        fs.unlinkSync('./oldCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
-        }); 
+        });
         expect(createNotionEvent).toHaveBeenCalledTimes(1);
-        expect(createNotionEvent).toBeCalledWith(Object.values(calendar)[0],
-                                                '2012-11-07T23:59:00.000+01:00',
-                                                '2017-11-07T23:59:00.000+01:00');
+        expect(createNotionEvent).toBeCalledWith(
+            Object.values(calendar)[0],
+            '2012-11-07T23:59:00.000+01:00',
+            '2017-11-07T23:59:00.000+01:00'
+        );
     });
 
     test('Updating an existing event', async () => {
@@ -146,16 +137,17 @@ describe('Test addOrUpdateNotionCalendar', () => {
         });
         queryDatabaseNotion.mockReturnValue('fn2323id23');
         await addOrUpdateNotionCalendar();
-        fs.unlinkSync('./oldCalendar.ics',  function (err) {
+        fs.unlinkSync('./oldCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
-        }); 
+        });
         expect(queryDatabaseNotion).toHaveBeenCalledTimes(1);
         expect(queryDatabaseNotion).toBeCalledWith(Object.values(calendar)[0]);
         expect(updateDatabaseNotion).toHaveBeenCalledTimes(1);
-        expect(updateDatabaseNotion).toBeCalledWith(Object.values(calendar)[0],
-                                                    'fn2323id23',
-                                                    '2019-11-07T23:59:00.000+01:00',
-                                                    '2017-11-07T23:59:00.000+01:00');
+        expect(updateDatabaseNotion).toBeCalledWith(
+            Object.values(calendar)[0],
+            'fn2323id23',
+            '2019-11-07T23:59:00.000+01:00',
+            '2017-11-07T23:59:00.000+01:00'
+        );
     });
 });
-

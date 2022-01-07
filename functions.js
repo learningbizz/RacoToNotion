@@ -1,16 +1,17 @@
 const ical = require('ical');
 const fs = require('fs');
 const download = require('download');
-module.exports = { addOrUpdateNotionCalendar,checkIcalObjectEqual, getNewIcal, convertUTCtoBarcelonaTime,getStartAndEndDate };
+module.exports = {
+    addOrUpdateNotionCalendar,
+    checkIcalObjectEqual,
+    getNewIcal,
+    convertUTCtoBarcelonaTime,
+    getStartAndEndDate
+};
 
-const {
-    createNotionEvent,
-    updateDatabaseNotion,
-    queryDatabaseNotion
-} = require('./notionApiCalls');
+const { createNotionEvent, updateDatabaseNotion, queryDatabaseNotion } = require('./notionApiCalls');
 
 require('dotenv').config();
-
 
 /**
  * Downloads the new calendar from the Raco
@@ -21,7 +22,7 @@ async function getNewIcal() {
         await download(file, '.', { filename: 'newCalendar.ics' });
         console.log('Downloaded new Ical...\n');
     } catch (error) {
-        throw new Error(`[functions.getNewIcal] ${error.message}`)
+        throw new Error(`[functions.getNewIcal] ${error.message}`);
     }
 }
 
@@ -63,7 +64,7 @@ async function addOrUpdateNotionCalendar() {
         });
         console.log('\nFinished adding/updating tasks!');
     } catch (error) {
-        throw new Error(`[functions.addOrUpdateNotionCalendar] ${error.message}`)
+        throw new Error(`[functions.addOrUpdateNotionCalendar] ${error.message}`);
     }
 }
 
@@ -92,21 +93,20 @@ async function convertUTCtoBarcelonaTime(icalEventDate) {
         let stringWithISOtime = result.toISOString().slice(0, -1);
         stringWithISOtime = stringWithISOtime + '+01:00';
         return stringWithISOtime;
-    }
-    catch(error) {
-        throw new Error(`[functions.convertUTCtoBarcelonaTime] ${error.message}`)
+    } catch (error) {
+        throw new Error(`[functions.convertUTCtoBarcelonaTime] ${error.message}`);
     }
 }
 
 /**
  * Get the start and end date of a calendar event
  */
- async function getStartAndEndDate(icalEvent) {
+async function getStartAndEndDate(icalEvent) {
     const startTimeBarcelona = await convertUTCtoBarcelonaTime(icalEvent.start);
     let endTimeBarcelona = await convertUTCtoBarcelonaTime(icalEvent.end);
 
     if (startTimeBarcelona == endTimeBarcelona) {
-            endTimeBarcelona = null;
+        endTimeBarcelona = null;
     }
 
     return [startTimeBarcelona, endTimeBarcelona];

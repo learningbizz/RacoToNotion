@@ -5,12 +5,12 @@ require('dotenv').config();
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 const databaseId = process.env.NOTION_DATABASE_ID;
-module.exports = {createNotionEvent, updateDatabaseNotion, queryDatabaseNotion};
+module.exports = { createNotionEvent, updateDatabaseNotion, queryDatabaseNotion };
 
 /**
  * Add a calendar event (icalEvent) to the Notion database (databaseId).
  */
- async function createNotionEvent(icalEvent, startTimeBarcelona, endTimeBarcelona) {
+async function createNotionEvent(icalEvent, startTimeBarcelona, endTimeBarcelona) {
     try {
         const response = await notion.pages.create({
             parent: {
@@ -76,7 +76,7 @@ async function queryDatabaseNotion(icalEvent) {
 /**
  * Updates a Notion page (notionPageId) with the icalEvent data
  */
- async function updateDatabaseNotion(icalEvent, notionPageId, startTimeBarcelona, endTimeBarcelona) {
+async function updateDatabaseNotion(icalEvent, notionPageId, startTimeBarcelona, endTimeBarcelona) {
     try {
         const response = await notion.pages.update({
             page_id: notionPageId,
