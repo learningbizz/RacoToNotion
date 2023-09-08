@@ -125,7 +125,7 @@ describe('Test addOrUpdateNotionCalendar', () => {
         const calendar = ical.parseFile('./__tests__/newCalendarUpdateDate.ics');
         fs.copyFileSync('./__tests__/newCalendarUpdateDate.ics', './newCalendar.ics');
         fs.copyFileSync('./__tests__/oldCalendarUpdateDate.ics', './oldCalendar.ics');
-        queryDatabaseNotion.mockReturnValue('fn2323id23');
+        queryDatabaseNotion.mockReturnValue({results: [{id: 'fn2323id23'}]});
         await addOrUpdateNotionCalendar();
         fs.unlinkSync('./oldCalendar.ics', function (err) {
             if (err) console.log('ERROR: ' + err);
@@ -136,6 +136,26 @@ describe('Test addOrUpdateNotionCalendar', () => {
         expect(updateDatabaseNotion).toBeCalledWith(
             Object.values(calendar)[0],
             'fn2323id23',
+            '2019-11-07T23:59:00.000+01:00',
+            '2017-11-07T23:59:00.000+01:00'
+        );
+    });
+
+    test('Updating an existing event which was deleted in Notion', async () => {
+        const calendar = ical.parseFile('./__tests__/newCalendarUpdateDate.ics');
+        fs.copyFileSync('./__tests__/newCalendarUpdateDate.ics', './newCalendar.ics');
+        fs.copyFileSync('./__tests__/oldCalendarUpdateDate.ics', './oldCalendar.ics');
+        queryDatabaseNotion.mockReturnValue({results: []});
+        await addOrUpdateNotionCalendar();
+        fs.unlinkSync('./oldCalendar.ics', function (err) {
+            if (err) console.log('ERROR: ' + err);
+        });
+        expect(queryDatabaseNotion).toHaveBeenCalledTimes(1);
+        expect(queryDatabaseNotion).toBeCalledWith(Object.values(calendar)[0]);
+        expect(createNotionEvent).toHaveBeenCalledTimes(1);
+        expect(updateDatabaseNotion).toHaveBeenCalledTimes(0);
+        expect(createNotionEvent).toBeCalledWith(
+            Object.values(calendar)[0],
             '2019-11-07T23:59:00.000+01:00',
             '2017-11-07T23:59:00.000+01:00'
         );

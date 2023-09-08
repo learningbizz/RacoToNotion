@@ -47,6 +47,7 @@ async function createNotionEvent(icalEvent, startTimeBarcelona, endTimeBarcelona
                 }
             }
         });
+        return response;
     } catch (error) {
         throw new Error(`[notionApiCalls.createNotionEvent] ${error.message}`);
     }
@@ -66,10 +67,7 @@ async function queryDatabaseNotion(icalEvent) {
                 }
             }
         });
-        if (response.results.length == 0)
-            return null;
-        else
-            return response.results[0].id;
+        return response;
     } catch (error) {
         throw new Error(`[notionApiCalls.queryDatabaseNotion] ${error.message}`);
     }
@@ -100,6 +98,7 @@ async function updateDatabaseNotion(icalEvent, notionPageId, startTimeBarcelona,
                 }
             }
         });
+        return response;
     } catch (error) {
         throw new Error(`[notionApiCalls.updateDatabaseNotion] ${error.message}`);
     }

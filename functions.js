@@ -51,12 +51,12 @@ async function addOrUpdateNotionCalendar() {
             else if (!(await checkIcalObjectEqual(newIcal[id], oldIcal[id]))) {
                 ++counterEventsAdded;
                 console.log(newIcal[id].summary + ' event was found (to update)...');
-                const notionPageId = await queryDatabaseNotion(newIcal[id]);
+                const response_query_database = await queryDatabaseNotion(newIcal[id]);
                 const dates = await getStartAndEndDate(newIcal[id]);
                 // If the user deletes the event from the database
-                notionPageId == null ?
+                response_query_database.results.length == 0 ?
                     createNotionEvent(newIcal[id], dates[0], dates[1]) :
-                    updateDatabaseNotion(newIcal[id], notionPageId, dates[0], dates[1]);
+                    updateDatabaseNotion(newIcal[id], response_query_database.results[0].id, dates[0], dates[1]);
                     // NO AWAIT FOR EXPLOIT CONCURRENCY
             }
         }
