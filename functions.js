@@ -33,16 +33,18 @@ async function addOrUpdateNotionCalendar() {
     try {
         const newIcal = ical.parseFile('./newCalendar.ics');
         // The old Calendar will start empty the first time you run the program
-        if (!fs.existsSync('./oldCalendar.ics')) fs.writeFileSync('./oldCalendar.ics', '');
+        if (!fs.existsSync('./oldCalendar.ics'))
+            fs.writeFileSync('./oldCalendar.ics', '');
         const oldIcal = ical.parseFile('./oldCalendar.ics');
         let counterEventsAdded = 0;
+
         for (let id in newIcal) {
             // If the event represented by id is not in the old calendar
             if (!(id in oldIcal)) {
                 ++counterEventsAdded;
                 console.log('New event was found: ' + newIcal[id].summary);
                 const dates = await getStartAndEndDate(newIcal[id]);
-                const response = createNotionEvent(newIcal[id], dates[0], dates[1]);
+                createNotionEvent(newIcal[id], dates[0], dates[1]);
                 // NO AWAIT FOR EXPLOIT CONCURRENCY
             }
             // If the event represented in the id exists in the old calendar and its modified
@@ -51,16 +53,22 @@ async function addOrUpdateNotionCalendar() {
                 console.log(newIcal[id].summary + ' event was found (to update)...');
                 const notionPageId = await queryDatabaseNotion(newIcal[id]);
                 const dates = await getStartAndEndDate(newIcal[id]);
-                const response = updateDatabaseNotion(newIcal[id], notionPageId, dates[0], dates[1]);
-                // NO AWAIT FOR EXPLOIT CONCURRENCY
+                // If the user deletes the event from the database
+                notionPageId == null ?
+                    createNotionEvent(newIcal[id], dates[0], dates[1]) :
+                    updateDatabaseNotion(newIcal[id], notionPageId, dates[0], dates[1]);
+                    // NO AWAIT FOR EXPLOIT CONCURRENCY
             }
         }
-        if (counterEventsAdded == 1) console.log('\nA total of ' + counterEventsAdded + ' event was created/updated.');
-        else console.log('\nA total of ' + counterEventsAdded + ' events were created/updated.');
+        if (counterEventsAdded == 1)
+            console.log('\nA total of ' + counterEventsAdded + ' event was created/updated.');
+        else
+            console.log('\nA total of ' + counterEventsAdded + ' events were created/updated.');
 
         // Replace the old Calendar with the new one, so when the program is executed again the old version is updated.
         fs.rename('./newCalendar.ics', './oldCalendar.ics', function (err) {
-            if (err) console.log('ERROR: ' + err);
+            if (err)
+                console.log('ERROR: ' + err);
         });
         console.log('\nFinished adding/updating tasks!');
     } catch (error) {
