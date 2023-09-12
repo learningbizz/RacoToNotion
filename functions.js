@@ -22,7 +22,7 @@ async function getNewIcal() {
         await download(file, '.', { filename: 'newCalendar.ics' });
         console.log('Downloaded new Ical...\n');
     } catch (error) {
-        throw new Error(`[functions.getNewIcal] ${error.message}`);
+        throw new Error(`Error fetching iCal`, {cause: error});
     }
 }
 
@@ -30,50 +30,46 @@ async function getNewIcal() {
  * Adds or updates the Notion Calendar based on the new events added or the old ones updated
  */
 async function addOrUpdateNotionCalendar() {
-    try {
-        const newIcal = ical.parseFile('./newCalendar.ics');
-        // The old Calendar will start empty the first time you run the program
-        if (!fs.existsSync('./oldCalendar.ics'))
-            fs.writeFileSync('./oldCalendar.ics', '');
-        const oldIcal = ical.parseFile('./oldCalendar.ics');
-        let counterEventsAdded = 0;
+    const newIcal = ical.parseFile('./newCalendar.ics');
+    // The old Calendar will start empty the first time you run the program
+    if (!fs.existsSync('./oldCalendar.ics'))
+        fs.writeFileSync('./oldCalendar.ics', '');
+    const oldIcal = ical.parseFile('./oldCalendar.ics');
+    let counterEventsAdded = 0;
 
-        for (let id in newIcal) {
-            // If the event represented by id is not in the old calendar
-            if (!(id in oldIcal)) {
-                ++counterEventsAdded;
-                console.log('New event was found: ' + newIcal[id].summary);
-                const dates = await getStartAndEndDate(newIcal[id]);
-                createNotionEvent(newIcal[id], dates[0], dates[1]);
-                // NO AWAIT FOR EXPLOIT CONCURRENCY
-            }
-            // If the event represented in the id exists in the old calendar and its modified
-            else if (!(await checkIcalObjectEqual(newIcal[id], oldIcal[id]))) {
-                ++counterEventsAdded;
-                console.log(newIcal[id].summary + ' event was found (to update)...');
-                const response_query_database = await queryDatabaseNotion(newIcal[id]);
-                const dates = await getStartAndEndDate(newIcal[id]);
-                // If the user deletes the event from the database but it gets updated
-                response_query_database.results.length == 0 ?
-                    createNotionEvent(newIcal[id], dates[0], dates[1]) :
-                    updateDatabaseNotion(newIcal[id], response_query_database.results[0].id, dates[0], dates[1]);
-                    // NO AWAIT FOR EXPLOIT CONCURRENCY
-            }
+    for (let id in newIcal) {
+        // If the event represented by id is not in the old calendar
+        if (!(id in oldIcal)) {
+            ++counterEventsAdded;
+            console.log('New event was found: ' + newIcal[id].summary);
+            const dates = await getStartAndEndDate(newIcal[id]);
+            createNotionEvent(newIcal[id], dates[0], dates[1])
+            // NO AWAIT FOR EXPLOIT CONCURRENCY
         }
-        if (counterEventsAdded == 1)
-            console.log('\nA total of ' + counterEventsAdded + ' event was created/updated.');
-        else
-            console.log('\nA total of ' + counterEventsAdded + ' events were created/updated.');
-
-        // Replace the old Calendar with the new one, so when the program is executed again the old version is updated.
-        fs.rename('./newCalendar.ics', './oldCalendar.ics', function (err) {
-            if (err)
-                console.log('ERROR: ' + err);
-        });
-        console.log('\nFinished adding/updating tasks!');
-    } catch (error) {
-        throw new Error(`[functions.addOrUpdateNotionCalendar] ${error.message}`);
+        // If the event represented in the id exists in the old calendar and its modified
+        else if (!(await checkIcalObjectEqual(newIcal[id], oldIcal[id]))) {
+            ++counterEventsAdded;
+            console.log(newIcal[id].summary + ' event was found (to update)...');
+            const response_query_database = await queryDatabaseNotion(newIcal[id])
+            const dates = await getStartAndEndDate(newIcal[id]);
+            // If the user deletes the event from the database but it gets updated
+            response_query_database.results.length == 0 ? 
+                createNotionEvent(newIcal[id], dates[0], dates[1]) :
+                updateDatabaseNotion(newIcal[id], response_query_database.results[0].id, dates[0], dates[1])
+                // NO AWAIT TO EXPLOIT CONCURRENCY
+        }
     }
+    if (counterEventsAdded == 1)
+        console.log('\nA total of ' + counterEventsAdded + ' event was created/updated.');
+    else
+        console.log('\nA total of ' + counterEventsAdded + ' events were created/updated.');
+
+    // Replace the old Calendar with the new one, so when the program is executed again the old version is updated.
+    fs.rename('./newCalendar.ics', './oldCalendar.ics', function (err) {
+        if (err)
+            console.error(err);
+    });
+    console.log('\nFinished adding/updating tasks!');
 }
 
 /**
